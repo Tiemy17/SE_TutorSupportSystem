@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Easy Ways to Start Learning Programming - HCMUT Tutor System</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        
+        /* CSS Variables */
+        :root {
+            --dark-blue: rgba(40, 41, 56, 1);
+            --royal-blue: #2405f2;
+            --red-hcmut: #d84040;
+            --yellow-accent: #fcd980;
+            --light-bg: #eef4fa;
+            
+            --body-2-font-family: "Poppins", Helvetica;
+            --body-2-font-weight: 500;
+            --body-2-font-size: 16px;
+            --body-2-letter-spacing: 0px;
+            --body-2-line-height: 28px;
+            --body-2-font-style: normal;
+            --heading-6-bold-font-family: "Poppins", Helvetica;
+            --heading-6-bold-font-weight: 700;
+            --heading-6-bold-font-size: 24px;
+            --heading-6-bold-letter-spacing: 0.12px;
+            --heading-6-bold-line-height: 139.9999976158142%;
+            --heading-6-bold-font-style: normal;
+            --body1-regular-font-family: "Poppins", Helvetica;
+            --body1-regular-font-weight: 400;
+            --body1-regular-font-size: 16px;
+            --body1-regular-letter-spacing: 0px;
+            --body1-regular-line-height: 150%;
+            --body1-regular-font-style: normal;
+            --heading-8-medium-font-family: "Poppins", Helvetica;
+            --heading-8-medium-font-weight: 500;
+            --heading-8-medium-font-size: 18px;
+            --heading-8-medium-letter-spacing: 0.09px;
+            --heading-8-medium-line-height: 150%;
+            --heading-8-medium-font-style: normal;
+            --body1-medium-font-family: "Poppins", Helvetica;
+            --body1-medium-font-weight: 500;
+            --body1-medium-font-size: 16px;
+            --body1-medium-letter-spacing: 0px;
+            --body1-medium-line-height: 150%;
+            --body1-medium-font-style: normal;
+            --heading-8-regular-font-family: "Poppins", Helvetica;
+            --heading-8-regular-font-weight: 400;
+            --heading-8-regular-font-size: 18px;
+            --heading-8-regular-letter-spacing: 0.09px;
+            --heading-8-regular-line-height: 150%;
+            --heading-8-regular-font-style: normal;
+            --heading-7-medium-font-family: "Poppins", Helvetica;
+            --heading-7-medium-font-weight: 500;
+            --heading-7-medium-font-size: 20px;
+            --heading-7-medium-letter-spacing: 0.1px;
+            --heading-7-medium-line-height: 150%;
+            --heading-7-medium-font-style: normal;
+            --body2-medium-font-family: "Poppins", Helvetica;
+            --body2-medium-font-weight: 500;
+            --body2-medium-font-size: 14px;
+            --body2-medium-letter-spacing: 0px;
+            --body2-medium-line-height: 150%;
+            --body2-medium-font-style: normal;
+            --body3-regular-font-family: "Poppins", Helvetica;
+            --body3-regular-font-weight: 400;
+            --body3-regular-font-size: 12px;
+            --body3-regular-letter-spacing: 0px;
+            --body3-regular-line-height: 150%;
+            --body3-regular-font-style: normal;
+        }
+
+        /* Base Styles */
+        * { -webkit-font-smoothing: antialiased; box-sizing: border-box; }
+        html, body { margin: 0px; height: 100%; }
+        button:focus-visible, a:focus-visible { outline: 2px solid #4a90e2 !important; outline-offset: 2px; }
+        a { text-decoration: none; color: inherit; }
+        button { background: none; border: none; padding: 0; cursor: pointer; }
+
+        .element-detail-blog {
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            min-width: 1440px;
+            min-height: 3519px;
+            position: relative;
+        }
+
+        /* Header & Navigation */
+        .element-detail-blog .navigasi-login {
+            position: absolute; top: 1px; left: 0; width: 1440px; height: 90px; background-color: var(--red-hcmut);
+        }
+        .element-detail-blog .text-wrapper-19 { /* [LOGO] */
+            position: absolute; width: 6.46%; height: 37.78%; top: 31.11%; left: 4.86%; font-family: var(--heading-6-bold-font-family); font-weight: var(--heading-6-bold-font-weight); color: #ffffff; font-size: var(--heading-6-bold-font-size); letter-spacing: var(--heading-6-bold-letter-spacing); line-height: var(--heading-6-bold-line-height); white-space: nowrap; font-style: var(--heading-6-bold-font-style);
+        }
+        .element-detail-blog .navbar {
+            position: absolute; width: 32.50%; height: 26.67%; top: 36.67%; left: 34.03%;
+        }
+        .element-detail-blog .navbar a {
+            position: absolute; height: 100%; top: 0; color: #ffffff; white-space: nowrap; display: flex; align-items: center;
+        }
+        .element-detail-blog .navbar a:hover { opacity: 0.8; }
+        .element-detail-blog .text-wrapper-14 { width: 10.04%; left: 0; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); font-size: var(--body1-medium-font-size); line-height: var(--body1-medium-line-height); letter-spacing: var(--body1-medium-letter-spacing); font-style: var(--body1-medium-font-style); }
+        .element-detail-blog .text-wrapper-15 { width: 10.90%; left: 22.86%; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); text-align: center; font-size: var(--body1-regular-font-size); line-height: var(--body1-regular-line-height); letter-spacing: var(--body1-regular-letter-spacing); font-style: var(--body1-regular-font-style); }
+        .element-detail-blog .text-wrapper-16 { width: 15.60%; left: 47.01%; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); text-align: center; font-size: var(--body1-regular-font-size); line-height: var(--body1-regular-line-height); letter-spacing: var(--body1-regular-letter-spacing); font-style: var(--body1-regular-font-style); }
+        .element-detail-blog .BLOG { width: 16.45%; left: 69.02%; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); text-align: right; font-size: var(--body1-medium-font-size); line-height: var(--body1-medium-line-height); letter-spacing: var(--body1-medium-letter-spacing); font-style: var(--body1-medium-font-style); }
+
+        /* Search Icon Button */
+        .element-detail-blog .frame-wrapper { position: absolute; width: 4.27%; height: 83.33%; top: 8.33%; left: 94.02%; display: flex; }
+        .element-detail-blog .frame { flex: 1; width: 20px; position: relative; }
+        .element-detail-blog .vector { position: absolute; width: 66.67%; height: 66.67%; top: 12.92%; left: 12.92%; }
+
+        /* User Info (Top Right) */
+        .element-detail-blog .generic-avatar { position: absolute; top: 25px; left: 1125px; width: 40px; height: 40px; border-radius: 50%; }
+        .element-detail-blog .group-4 { position: absolute; top: 26px; left: 1175px; width: 186px; height: 39px; display: flex; gap: 39px; align-items: center; }
+        .element-detail-blog .group-5 { width: 123px; height: 39px; display: flex; flex-direction: column; }
+        .element-detail-blog .text-wrapper-17 { width: 119px; height: 21px; font-family: var(--body2-medium-font-family); font-weight: var(--body2-medium-font-weight); color: #ffffff; font-size: var(--body2-medium-font-size); letter-spacing: var(--body2-medium-letter-spacing); line-height: var(--body2-medium-line-height); white-space: nowrap; font-style: var(--body2-medium-font-style); }
+        .element-detail-blog .text-wrapper-18 { width: 118px; height: 18px; opacity: 0.7; font-family: var(--body3-regular-font-family); font-weight: var(--body3-regular-font-weight); color: #ffffff; font-size: var(--body3-regular-font-size); letter-spacing: var(--body3-regular-letter-spacing); line-height: var(--body3-regular-line-height); white-space: nowrap; font-style: var(--body3-regular-font-style); }
+        .element-detail-blog .icon { margin-top: 7px; width: 24px; height: 24px; position: relative; }
+        .element-detail-blog .img { position: absolute; width: 50.00%; height: 25.00%; top: 33.33%; left: 20.83%; }
+
+        /* Sub Header / Breadcrumb */
+        .element-detail-blog .rectangle { top: 90px; width: 1440px; height: 86px; background-color: var(--light-bg); position: absolute; left: 0; }
+        .element-detail-blog .home-about-center { 
+            position: absolute; top: 119px; left: 70px; /* Adjusted position */
+            width: 817px; opacity: 0.7; font-family: var(--body-2-font-family); font-weight: var(--body-2-font-weight); color: var(--dark-blue); font-size: var(--body-2-font-size); letter-spacing: var(--body-2-letter-spacing); line-height: var(--body-2-line-height); font-style: var(--body-2-font-style);
+        }
+        .element-detail-blog .home-about-center a, .element-detail-blog .home-about-center span {
+            color: var(--dark-blue);
+        }
+        .element-detail-blog .home-about-center a:hover { text-decoration: underline; }
+        
+        /* Blog Header */
+        .element-detail-blog .blog-header { position: absolute; top: 251px; right: 239px; width: 958px; height: 211px; display: flex; flex-direction: column; }
+        .element-detail-blog .group { margin-left: 47px; width: 156px; height: 32px; position: relative; }
+        .element-detail-blog .rectangle-2 { top: 0; width: 154px; height: 32px; background-color: var(--royal-blue); border-radius: 5px; position: absolute; left: 0; }
+        .element-detail-blog .tips-tricks { position: absolute; top: 4px; left: 16px; font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: #ffffff; font-size: 16px; letter-spacing: 0; line-height: 27.2px; white-space: nowrap; }
+        .element-detail-blog .p { align-self: flex-end; margin-right: 4px; width: 954px; height: 67px; margin-top: 21px; font-family: "Poppins-Bold", Helvetica; font-weight: 700; color: var(--dark-blue); font-size: 42px; text-align: center; letter-spacing: 0.21px; line-height: 67.2px; }
+        .element-detail-blog .son-tung-MTP-posted { align-self: flex-end; margin-right: 94px; width: 817px; height: 27px; margin-top: 64px; opacity: 0.7; font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: var(--dark-blue); font-size: 16px; letter-spacing: 0; line-height: 27.2px; }
+        .element-detail-blog .text-wrapper-3 { font-weight: 700; color: var(--dark-blue); opacity: 1; } /* Author name */
+        .element-detail-blog .text-wrapper-4 { font-family: "Poppins-Medium", Helvetica; font-weight: 500; }
+        
+        /* Cover Image */
+        .element-detail-blog .cover { position: absolute; top: 526px; left: 180px; width: 1080px; height: 480px; object-fit: cover; }
+        
+        /* Main Content Area */
+        .element-detail-blog .content { position: absolute; top: 1034px; left: 290px; width: 857px; height: 1971px; }
+
+        .element-detail-blog .content h2 { /* Styling for implicit headings from ordered list */
+            font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: var(--dark-blue); font-size: 24px; letter-spacing: 0.12px; line-height: 33.6px; margin-top: 50px;
+        }
+
+        .element-detail-blog .content p, .element-detail-blog .content li { 
+            font-family: "Poppins-Regular", Helvetica; font-weight: 400; color: var(--dark-blue); font-size: 16px; letter-spacing: 0; line-height: 27.2px; margin: 16px 0; opacity: 0.7;
+        }
+        
+        /* Specific content positioning/styling (keeping original layout positions) */
+        .element-detail-blog .before-learning-how { /* Intro Paragraph */
+            position: absolute; top: 0; left: 0; width: 838px; opacity: 0.7;
+        }
+        
+        .element-detail-blog .however-it-s { /* Post-list paragraph */
+            position: absolute; top: 667px; left: 0; width: 838px; opacity: 0.7;
+        }
+
+        /* Ordered list items (hidden and separated in source, recombined here for structure) */
+        .element-detail-blog .content ol { 
+            list-style-type: none; /* Remove default numbering as text numbers are provided */
+            padding-left: 0; 
+            margin-top: 40px;
+        }
+        .element-detail-blog .content ol li {
+            font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: var(--dark-blue); font-size: 24px; letter-spacing: 0.12px; line-height: 33.6px;
+            margin-bottom: 20px;
+            opacity: 1;
+        }
+        
+        /* Specific paragraph styles (below list items) */
+        .element-detail-blog .the-first-step-to { /* Content below step 1 title */
+            position: absolute; top: 363px; left: 0; width: 836px; opacity: 0.7;
+        }
+        .element-detail-blog .the-second-step-in { /* Content below step 2 title */
+            position: absolute; top: 1064px; left: 0; width: 836px; opacity: 0.7;
+        }
+        .element-detail-blog .the-third-step-in { /* Content below step 3 title */
+            position: absolute; top: 1518px; left: 0; width: 836px; opacity: 0.7;
+        }
+
+        /* Highlighting text within paragraphs */
+        .element-detail-blog .text-wrapper { font-family: "Poppins-Regular", Helvetica; font-weight: 400; color: #282938; font-size: 16px; letter-spacing: 0; line-height: 27.2px; opacity: 1; }
+        .element-detail-blog .span { font-family: "Poppins-Bold", Helvetica; font-weight: 700; color: #282938; opacity: 1; }
+        
+        /* Footer */
+        .element-detail-blog .footer { position: absolute; top: 3079px; left: 0; width: 1444px; height: 440px; background-color: transparent; }
+        .element-detail-blog .rectangle-3 { width: 100%; height: 81.82%; top: 0; background-color: var(--red-hcmut); position: absolute; left: 0; }
+        .element-detail-blog .EDUFREE { position: absolute; width: 20.84%; height: 7.73%; top: 15.91%; left: 4.86%; font-family: var(--heading-6-bold-font-family); font-weight: var(--heading-6-bold-font-weight); color: #ffffff; font-size: var(--heading-6-bold-font-size); letter-spacing: var(--heading-6-bold-letter-spacing); line-height: var(--heading-6-bold-line-height); white-space: nowrap; font-style: var(--heading-6-bold-font-style); }
+        .element-detail-blog .lorem-ipsum-dolor { position: absolute; width: 22.71%; height: 5.45%; top: 26.14%; left: 4.86%; opacity: 0.9; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); color: #ffffff; font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); font-style: var(--body1-regular-font-style); }
+        .element-detail-blog .group-wrapper { position: absolute; width: 100%; height: 18.18%; top: 81.82%; left: 0; background-color: #ffffff; }
+        .element-detail-blog .group-2 { position: relative; width: 84.72%; height: 33.75%; top: 33.75%; left: 5.14%; }
+        .element-detail-blog .copyright-EDUFREE { position: absolute; width: 29.59%; height: 100%; top: 0; left: 0; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style); }
+        
+        .element-detail-blog .navbar-item { position: absolute; width: 30.40%; height: 88.89%; top: 11.11%; left: 70.09%; display: flex; align-items: center; }
+        .element-detail-blog .navbar-item a { position: absolute; height: 100%; top: 0; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); color: #282938; font-size: var(--body1-medium-font-size); letter-spacing: var(--body1-medium-letter-spacing); line-height: var(--body1-medium-line-height); white-space: nowrap; font-style: var(--body1-medium-font-style); }
+        .element-detail-blog .navbar-item a:hover { text-decoration: underline; }
+        .element-detail-blog .text-wrapper-5 { width: 12.64%; left: 0; }
+        .element-detail-blog .TENTANG-KAMI { width: 32.80%; left: 22.11%; }
+        .element-detail-blog .KURSUS { width: 19.90%; left: 63.09%; }
+        .element-detail-blog .text-wrapper-6 { width: 8.60%; left: 89.24%; }
+
+        .element-detail-blog .info-wrapper { position: absolute; width: 29.17%; height: 20.00%; top: 61.82%; left: 4.86%; background-color: var(--yellow-accent); }
+        .element-detail-blog .info { position: relative; width: 86.57%; height: 65.91%; top: 17.05%; left: 7.14%; }
+        .element-detail-blog .text-wrapper-8 { position: absolute; width: 13.99%; height: 46.55%; top: 0; left: 0; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style); }
+        .element-detail-blog .text-wrapper-7 { position: absolute; width: 49.65%; height: 41.38%; top: 58.62%; left: 0; opacity: 0.8; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); color: var(--dark-blue); font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); white-space: nowrap; font-style: var(--body1-regular-font-style); }
+        .element-detail-blog .text-wrapper-9 { position: absolute; width: 26.61%; height: 46.55%; top: 0; left: 57.76%; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style); }
+        .element-detail-blog .element { position: absolute; width: 40.05%; height: 41.38%; top: 56.90%; left: 57.76%; opacity: 0.8; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); color: var(--dark-blue); font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); white-space: nowrap; font-style: var(--body1-regular-font-style); }
+        .element-detail-blog .info a:hover { text-decoration: underline; }
+
+        .element-detail-blog .group-3 { position: absolute; width: 597px; height: 144px; top: 3146px; left: 699px; }
+        .element-detail-blog .support, .element-detail-blog .support-2, .element-detail-blog .support-3 { position: absolute; top: 0; height: 100%; }
+        .element-detail-blog .support { width: 23.12%; left: 0; }
+        .element-detail-blog .support-3 { width: 20.60%; height: 75.69%; left: 38.19%; }
+        .element-detail-blog .support-2 { width: 21.94%; left: 79.40%; }
+
+        .element-detail-blog .sosial-media, .element-detail-blog .text-wrapper-13, .element-detail-blog .DUKUNGAN { position: absolute; top: 0; height: 20.83%; font-family: var(--heading-7-medium-font-family); font-weight: var(--heading-7-medium-font-weight); color: #ffffff; font-size: var(--heading-7-medium-font-size); letter-spacing: var(--heading-7-medium-letter-spacing); line-height: var(--heading-7-medium-line-height); white-space: nowrap; font-style: var(--heading-7-medium-font-style); left: 0; }
+        .element-detail-blog .sosial-media { width: 94.20%; }
+        .element-detail-blog .text-wrapper-13 { width: 72.36%; }
+        .element-detail-blog .DUKUNGAN { width: 68.70%; }
+
+        .element-detail-blog .support a, .element-detail-blog .support-3 a, .element-detail-blog .support-2 a { position: absolute; left: 0; font-family: var(--heading-8-regular-font-family); font-weight: var(--heading-8-regular-font-weight); color: #ffffff; font-size: var(--heading-8-regular-font-size); letter-spacing: var(--heading-8-regular-letter-spacing); line-height: var(--heading-8-regular-line-height); white-space: nowrap; font-style: var(--heading-8-regular-font-style); }
+        .element-detail-blog .support a:hover, .element-detail-blog .support-3 a:hover, .element-detail-blog .support-2 a:hover { text-decoration: underline; }
+
+        .element-detail-blog .text-wrapper-10 { width: 68.84%; height: 18.75%; top: 35.42%; }
+        .element-detail-blog .text-wrapper-11 { width: 44.20%; height: 18.75%; top: 56.94%; }
+        .element-detail-blog .text-wrapper-12 { width: 52.90%; height: 18.75%; top: 81.25%; }
+        .element-detail-blog .merdeka-belajar { width: 95.12%; height: 24.77%; top: 46.79%; }
+        .element-detail-blog .finterpreneur { width: 89.43%; height: 24.77%; top: 75.23%; }
+        .element-detail-blog .tentang-kami { width: 61.83%; height: 18.75%; top: 35.42%; }
+        .element-detail-blog .ketentuan { width: 61.83%; height: 18.75%; top: 56.94%; }
+        .element-detail-blog .kebijakan-privasi { width: 93.89%; height: 18.75%; top: 81.25%; }
+    </style>
+</head>
+<body>
+    <div class="element-detail-blog">
+        
+        <header class="navigasi-login">
+            <div class="text-wrapper-19">[LOGO]</div>
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="#home" class="text-wrapper-14">HOME</a>
+                <a href="#tutor" class="text-wrapper-15">TUTOR</a>
+                <a href="#courses" class="text-wrapper-16">COURSES</a>
+                <a href="#blog" class="BLOG">BLOG</a>
+                <a href="#search" class="frame-wrapper" aria-label="Search">
+                    <div class="frame"><img class="vector" src="img/vector.svg" alt="Search icon" /></div>
+                </a>
+            </nav>
+            <img class="generic-avatar" src="img/generic-avatar.svg" alt="User avatar" />
+            <div class="group-4">
+                <div class="group-5">
+                    <div class="text-wrapper-17">Hi, Son Tung MTP</div>
+                    <div class="text-wrapper-18">Frontend Developer</div>
+                </div>
+                <button class="icon" aria-label="Notifications">
+                    <img class="img" src="img/image.svg" alt="Notification icon" />
+                </button>
+            </div>
+        </header>
+
+        <div class="rectangle"></div>
+        <nav class="home-about-center" aria-label="Breadcrumb">
+            <a href="#home">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="#blog">Blog</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<span>Easy Ways to Start Learning Programming</span>
+        </nav>
+
+        <section class="blog-header">
+            <div class="group">
+                <div class="rectangle-2"></div>
+                <div class="tips-tricks">#&nbsp;&nbsp;Tips &amp; Tricks</div>
+            </div>
+            <h1 class="p">Easy Ways to Start Learning Programming</h1>
+            <p class="son-tung-MTP-posted">
+                <span class="text-wrapper-3">Son Tung MTP</span><span class="text-wrapper-4"> posted on 27 January 2025</span>
+            </p>
+        </section>
+
+        <img class="cover" src="img/cover.png" alt="Programming blog cover image" />
+
+        <main class="content">
+            <p class="before-learning-how">Before learning how to program, you should first understand what the word "**programming**" means.<br /><br />Programming is the use of one or more algorithms to create interconnected programming languages, ultimately producing a program on a computer. Now that you understand the basics of programming, it's time to discuss tips and tricks, as well as how to learn programming from the ground up, for those of you just starting out. <br /><br />Don't worry, it's easy.</p>
+            
+            <h2 id="step-by-step" class="element-choose-a">Steps to Self-Taught Programming:</h2>
+            <ol>
+                <li id="step-1">
+                    <p class="element-choose-a">1. Choose a programming language you want to learn and master.</p>
+                    <p class="the-first-step-to">The first step to self-taught programming is:<br />**Deciding which programming language you'll learn.**<br />Choosing a programming language is crucial for establishing a focus. <br />Learning a programming language haphazardly will only hinder your learning process. <br /><br />Tips for choosing a programming language are based on your own abilities. It's important to understand your own abilities so you can learn a programming language easily. <br /><br />If you're a beginner, you can learn **HTML** first. Once you're proficient with HTML, you can move on to the next section. Essentially, as a beginner, you should learn the easiest programming language first.</p>
+                </li>
+                <li id="step-2">
+                    <p class="div">2. Use the help of modules or programming reading materials with complete tutorials.</p>
+                    <p class="the-second-step-in"><span class="text-wrapper">The second step in learning a programming language is **using modules or books as learning aids**. Modules and books can be the perfect tools to accelerate your programming learning process. <br /><br />You need to choose the right modules and books with comprehensive programming tutorials. If you're using more than one module or book, be sure to organize and organize them sequentially to avoid learning difficulties.<br /><br />Using separate and scattered reading materials will only make your programming learning process longer. Therefore, make sure you always take inventory of the reading materials you use while learning programming. <br /><br />You can also find programming learning modules in the courses available on</span><span class="span"> HCMUT Tutor System</span><span class="text-wrapper">, which are of course free.</span></p>
+                </li>
+                <li id="step-3">
+                    <p class="element-create-and">3. Create and organize a programming study schedule</p>
+                    <p class="the-third-step-in">The third step in learning programming is to **create a programming study schedule**. You can make a daily or weekly study schedule. Creating a study schedule helps you quickly understand programming.<br /><br />You need to force yourself to adhere to the programming study schedule you make. Do not get used to skipping study sessions, even just once. This is because if allowed to continue, it will increasingly enhance your laziness in learning.<br /><br />On the other hand, if studying is done seriously and according to schedule, the study activity will eventually become a habit.<br /><br />When arranging a programming study schedule, you can allocate about **1 to 2 hours** in a day for studying programming. There is no need to follow a daily programming study routine if you do not actually have that much time.</p>
+                </li>
+            </ol>
+            
+            <p class="however-it-s">However, it's important to emphasize that learning programming isn't just about mastering one programming language. <br /><br />You also need to improve the following: <br />* Improve your approach to learning programming languages with higher difficulty levels. <br />* Keep a small notebook to jot down important points in the programming language you're learning. <br />* Reread your notes frequently to avoid forgetting.</p>
+        </main>
+
+        <footer class="footer">
+            <div class="rectangle-3"></div>
+            <div class="EDUFREE">[HCMUT TUTOR SYSTEM]</div>
+            <div class="lorem-ipsum-dolor">STRIVE FOR GREATNESS</div>
+            <div class="group-wrapper">
+                <div class="group-2">
+                    <p class="copyright-EDUFREE">© Copyright HCMUT TUTORSYSTEM 2025</p>
+                    <nav class="navbar-item" aria-label="Footer navigation">
+                        <a href="#home" class="text-wrapper-5">HOME</a>
+                        <a href="#about" class="TENTANG-KAMI">ABOUT CENTER</a>
+                        <a href="#courses" class="KURSUS">COURSES</a>
+                        <a href="#faq" class="text-wrapper-6">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <div class="info">
+                    <div class="text-wrapper-8">Email</div>
+                    <a href="mailto:contact@website.com" class="text-wrapper-7">contact@website.com</a>
+                    <div class="text-wrapper-9">Telephone</div>
+                    <a href="tel:+84686868686868" class="element">+84 6868 6868 68</a>
+                </div>
+            </div>
+            <div class="group-3">
+                <nav class="support" aria-label="Social media">
+                    <div class="sosial-media">Social Media</div>
+                    <a href="#instagram" class="text-wrapper-10">Instagram</a>
+                    <a href="#twitter" class="text-wrapper-11">Twitter</a>
+                    <a href="#linkedin" class="text-wrapper-12">LinkedIn</a>
+                </nav>
+                <nav class="support-3" aria-label="Programs">
+                    <div class="text-wrapper-13">Program</div>
+                    <a href="#free-learn" class="merdeka-belajar">Free to Learn</a>
+                    <a href="#free-take" class="finterpreneur">Free to Take</a>
+                </nav>
+                <nav class="support-2" aria-label="Support">
+                    <div class="DUKUNGAN">SUPPORT</div>
+                    <a href="#about-us" class="tentang-kami">About Us</a>
+                    <a href="#provision" class="ketentuan">Provision</a>
+                    <a href="#privacy" class="kebijakan-privasi">Privacy Policy</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
