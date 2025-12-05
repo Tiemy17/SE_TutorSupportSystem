@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>HCMUT Tutor System - Tutors</title>
+    <style>
+        /* CSS RESET */
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        
+        /* CSS Variables */
+        :root {
+            --dark-blue: rgba(40, 41, 56, 1);
+            --royal-blue: rgba(36, 5, 242, 1);
+            --red: #d84040; /* HCMUT Red for consistency */
+            --yellow: #fcd980; /* Accent Yellow for rating/active state */
+            --light-blue: #eef4fa; /* Background blue */
+            --body-2-font-family: "Poppins", Helvetica;
+            --body-2-font-weight: 500;
+            --body-2-font-size: 16px;
+            --body-2-letter-spacing: 0px;
+            --body-2-line-height: 28px;
+            --body-2-font-style: normal;
+            --body1-medium-font-family: "Poppins", Helvetica;
+            --body1-medium-font-weight: 500;
+            --body1-medium-font-size: 16px;
+            --body1-medium-letter-spacing: 0px;
+            --body1-medium-line-height: 150%;
+            --body1-medium-font-style: normal;
+            --body1-regular-font-family: "Poppins", Helvetica;
+            --body1-regular-font-weight: 400;
+            --body1-regular-font-size: 16px;
+            --body1-regular-letter-spacing: 0px;
+            --body1-regular-line-height: 150%;
+            --body1-regular-font-style: normal;
+            --body2-medium-font-family: "Poppins", Helvetica;
+            --body2-medium-font-weight: 500;
+            --body2-medium-font-size: 14px;
+            --body2-medium-letter-spacing: 0px;
+            --body2-medium-line-height: 150%;
+            --body2-medium-font-style: normal;
+            --body3-regular-font-family: "Poppins", Helvetica;
+            --body3-regular-font-weight: 400;
+            --body3-regular-font-size: 12px;
+            --body3-regular-letter-spacing: 0px;
+            --body3-regular-line-height: 150%;
+            --body3-regular-font-style: normal;
+            --heading-6-bold-font-family: "Poppins", Helvetica;
+            --heading-6-bold-font-weight: 700;
+            --heading-6-bold-font-size: 24px;
+            --heading-6-bold-letter-spacing: 0.12px;
+            --heading-6-bold-line-height: 139.9999976158142%;
+            --heading-6-bold-font-style: normal;
+            --heading-7-regular-font-family: "Poppins", Helvetica;
+            --heading-7-regular-font-weight: 400;
+            --heading-7-regular-font-size: 20px;
+            --heading-7-regular-letter-spacing: 0.1px;
+            --heading-7-regular-line-height: 150%;
+            --heading-7-regular-font-style: normal;
+            --label-01-font-family: "Poppins", Helvetica;
+            --label-01-font-weight: 500;
+            --label-01-font-size: 18px;
+            --label-01-letter-spacing: 0px;
+            --label-01-line-height: 32px;
+            --label-01-font-style: normal;
+            --heading-6-semibold-font-family: "Poppins", Helvetica;
+            --heading-6-semibold-font-weight: 600;
+            --heading-6-semibold-font-size: 24px;
+            --heading-6-semibold-letter-spacing: 0.12px;
+            --heading-6-semibold-line-height: 139.9999976158142%;
+            --heading-6-semibold-font-style: normal;
+            --heading-6-regular-font-family: "Poppins", Helvetica;
+            --heading-6-regular-font-weight: 400;
+            --heading-6-regular-font-size: 24px;
+            --heading-6-regular-letter-spacing: 0.12px;
+            --heading-6-regular-line-height: 139.9999976158142%;
+            --heading-6-regular-font-style: normal;
+            --body3-medium-font-family: "Poppins", Helvetica;
+            --body3-medium-font-weight: 500;
+            --body3-medium-font-size: 12px;
+            --body3-medium-letter-spacing: 0px;
+            --body3-medium-line-height: 150%;
+            --body3-medium-font-style: normal;
+            --heading-6-medium-font-family: "Poppins", Helvetica;
+            --heading-6-medium-font-weight: 500;
+            --heading-6-medium-font-size: 24px;
+            --heading-6-medium-letter-spacing: 0.12px;
+            --heading-6-medium-line-height: 139.9999976158142%;
+            --heading-6-medium-font-style: normal;
+            --heading-8-medium-font-family: "Poppins", Helvetica;
+            --heading-8-medium-font-weight: 500;
+            --heading-8-medium-font-size: 18px;
+            --heading-8-medium-letter-spacing: 0.09px;
+            --heading-8-medium-line-height: 150%;
+            --heading-8-medium-font-style: normal;
+            --heading-8-regular-font-family: "Poppins", Helvetica;
+            --heading-8-regular-font-weight: 400;
+            --heading-8-regular-font-size: 18px;
+            --heading-8-regular-letter-spacing: 0.09px;
+            --heading-8-regular-line-height: 150%;
+            --heading-8-regular-font-style: normal;
+            --heading-7-medium-font-family: "Poppins", Helvetica;
+            --heading-7-medium-font-weight: 500;
+            --heading-7-medium-font-size: 20px;
+            --heading-7-medium-letter-spacing: 0.1px;
+            --heading-7-medium-line-height: 150%;
+            --heading-7-medium-font-style: normal;
+        }
+
+        /* Merged and Consolidated CSS */
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            height: 100%;
+        }
+
+        button:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline: -webkit-focus-ring-color auto 5px !important;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .element-tutors-documents {
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            min-width: 1440px;
+            height: 2811px;
+            position: relative;
+        }
+
+        .element-tutors-documents .rectangle {
+            top: 90px;
+            width: 1440px;
+            height: 86px;
+            background-color: var(--light-blue);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Breadcrumb position updated for Tutors page */
+        .element-tutors-documents .home-tutors { 
+            position: absolute;
+            top: 119px;
+            left: 70px; /* Moved from right to left for better alignment with content */
+            width: 817px;
+            opacity: 0.7;
+            font-family: var(--body-2-font-family);
+            font-weight: var(--body-2-font-weight);
+            color: var(--dark-blue);
+            font-size: var(--body-2-font-size);
+            letter-spacing: var(--body-2-letter-spacing);
+            line-height: var(--body-2-line-height);
+            font-style: var(--body-2-font-style);
+        }
+
+        .element-tutors-documents .navigasi-login {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 90px;
+            background-color: var(--red);
+        }
+
+        .element-tutors-documents .navbar {
+            position: absolute;
+            width: 32.50%;
+            height: 26.67%;
+            top: 36.67%;
+            left: 34.03%;
+        }
+
+        .element-tutors-documents .navbar a {
+            text-decoration: none;
+            display: inline-block;
+            color: #ffffff;
+        }
+
+        .element-tutors-documents .navbar button,
+        .element-tutors-documents .icon {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .element-tutors-documents .div { /* TUTOR - Active link for this page */
+            position: absolute;
+            width: 10.90%;
+            height: 100%;
+            top: 0;
+            left: 22.86%;
+            font-family: var(--body1-medium-font-family);
+            font-weight: var(--body1-medium-font-weight); 
+            text-align: center;
+            line-height: var(--body1-medium-line-height);
+            letter-spacing: var(--body1-medium-letter-spacing);
+            white-space: nowrap;
+            font-style: var(--body1-medium-font-style);
+        }
+
+        /* User Info and Avatar in Header */
+        .element-tutors-documents .generic-avatar {
+            position: absolute;
+            top: 17px; /* Adjusted position for larger avatar */
+            left: 1360px; /* Aligned to the far right */
+            width: 56px; /* Increased size */
+            height: 56px; /* Increased size */
+            border-radius: 50%;
+        }
+        
+        .element-tutors-documents .group-2 { /* Container for Name/Title + Notification Icon */
+            position: absolute;
+            top: 26px;
+            left: 1150px; /* Moved left to accommodate larger avatar */
+            width: 186px;
+            height: 39px;
+            display: flex;
+            gap: 39px;
+        }
+
+
+        .element-tutors-documents .group-4 {
+            position: absolute;
+            width: 51.94%;
+            height: 2.28%;
+            top: 10.71%;
+            left: 24.17%;
+        }
+
+        .element-tutors-documents .rectangle-2 {
+            width: 99.73%;
+            height: 100%;
+            top: 0;
+            border-radius: 8px;
+            border: 1.5px solid;
+            border-color: #28293899;
+            position: absolute;
+            left: 0;
+        }
+
+        .element-tutors-documents .text-wrapper-6 {
+            position: absolute;
+            top: 17px;
+            left: 40px;
+            width: calc(100% - 80px);
+            height: calc(100% - 34px);
+            opacity: 0.8;
+            font-family: var(--heading-7-regular-font-family);
+            font-weight: var(--heading-7-regular-font-weight);
+            color: var(--dark-blue);
+            font-size: var(--heading-7-regular-font-size);
+            letter-spacing: var(--heading-7-regular-letter-spacing);
+            line-height: var(--heading-7-regular-line-height);
+            white-space: nowrap;
+            font-style: var(--heading-7-regular-font-style);
+            border: none;
+            background: transparent;
+            outline: none;
+        }
+
+        .element-tutors-documents .text-wrapper-6::placeholder {
+            opacity: 0.8;
+            color: var(--dark-blue);
+        }
+
+        .element-tutors-documents .navbar-2 {
+            position: absolute;
+            top: 408px;
+            right: 269px;
+            width: 888px;
+            height: 32px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .element-tutors-documents .navbar-2 button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-family: var(--label-01-font-family);
+            font-weight: var(--label-01-font-weight);
+            font-size: var(--label-01-font-size);
+            line-height: var(--label-01-line-height);
+            letter-spacing: var(--label-01-letter-spacing);
+            white-space: nowrap;
+            font-style: var(--label-01-font-style);
+        }
+        
+        .element-tutors-documents .navbar-2 .active-category {
+            color: var(--royal-blue);
+            margin-right: 25px;
+        }
+
+        .element-tutors-documents .navbar-2 .inactive-category {
+            opacity: 0.7;
+            color: var(--dark-blue);
+            margin-right: 40px;
+        }
+
+
+        /* Tutor Card Layout (Main Content) */
+        .element-tutors-documents .tutor-grid { 
+            position: absolute;
+            top: 500px; /* Adjusted top position to make space for search/categories */
+            left: 70px;
+            width: 1304px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 71px 40px;
+            padding-bottom: 50px;
+        }
+
+        .element-tutors-documents .tutor-card {
+            width: 386px;
+            height: 418px;
+            position: relative;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .element-tutors-documents .tutor-card-header {
+            width: 100%;
+            height: 236px;
+            position: relative;
+        }
+        
+        .element-tutors-documents .tutor-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .element-tutors-documents .tutor-rating {
+            position: absolute;
+            top: 215px;
+            right: 12px;
+            width: 65px;
+            height: 25px;
+        }
+
+        .element-tutors-documents .tutor-rating .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 63px;
+            height: 25px;
+            background-color: var(--red); 
+            border-radius: 5px;
+        }
+
+        .element-tutors-documents .tutor-rating .star-icon {
+            position: absolute;
+            top: 4px;
+            left: 11px;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .element-tutors-documents .tutor-rating .rating-text {
+            position: absolute;
+            top: 4px;
+            left: 33px;
+            width: 19px;
+            font-family: var(--body3-medium-font-family);
+            font-weight: var(--body3-medium-font-weight);
+            color: #ffffff;
+            font-size: var(--body3-medium-font-size);
+            white-space: nowrap;
+        }
+
+        .element-tutors-documents .tutor-content {
+            padding: 20px 25px;
+        }
+
+        .element-tutors-documents .tutor-name {
+            font-family: var(--heading-6-medium-font-family);
+            font-weight: var(--heading-6-medium-font-weight);
+            color: var(--dark-blue);
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .element-tutors-documents .tutor-major {
+            font-family: var(--body2-medium-font-family);
+            font-weight: var(--body2-medium-font-weight);
+            color: var(--royal-blue);
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .element-tutors-documents .tutor-stats {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            color: var(--dark-blue);
+            font-family: var(--body1-regular-font-family);
+            font-size: var(--body1-regular-font-size);
+        }
+
+        .element-tutors-documents .tutor-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .element-tutors-documents .tutor-stat-item img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+        .element-tutors-documents .tutor-courses-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .element-tutors-documents .tutor-course-tag {
+            background-color: var(--light-blue);
+            color: var(--dark-blue);
+            font-family: var(--body3-regular-font-family);
+            padding: 4px 10px;
+            border-radius: 4px;
+            opacity: 0.8;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        /* Pagination Styles - same as before */
+        .element-tutors-documents .group-5 {
+            position: absolute;
+            top: 2120px;
+            left: 531px;
+            width: 411px;
+            height: 51px;
+            display: flex;
+        }
+
+        /* Footer styles - same as before */
+        .element-tutors-documents .footer {
+            position: absolute;
+            top: 2371px;
+            left: -1px;
+            width: 1447px;
+            height: 440px;
+            background-color: transparent;
+        }
+        
+        /* ... (rest of the detailed but unchanged styles omitted for brevity) ... */
+
+        .element-tutors-documents .text-wrapper {
+            position: absolute;
+            width: 10.04%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            font-family: var(--body1-medium-font-family);
+            font-weight: var(--body1-medium-font-weight);
+            font-size: var(--body1-medium-font-size);
+            line-height: var(--body1-medium-line-height);
+            letter-spacing: var(--body1-medium-letter-spacing);
+            white-space: nowrap;
+            font-style: var(--body1-medium-font-style);
+        }
+        .element-tutors-documents .text-wrapper-2 {
+            position: absolute;
+            width: 16.03%;
+            height: 100%;
+            top: 0;
+            left: 46.79%;
+            font-family: var(--body1-regular-font-family);
+            font-weight: var(--body1-regular-font-weight);
+            font-size: var(--body1-regular-font-size);
+            text-align: center;
+            line-height: var(--body1-regular-line-height);
+            letter-spacing: var(--body1-regular-letter-spacing);
+            white-space: nowrap;
+            font-style: var(--body1-regular-font-style);
+        }
+        .element-tutors-documents .BLOG {
+            position: absolute;
+            width: 18.16%;
+            height: 100%;
+            top: 0;
+            left: 67.31%;
+            font-family: var(--body1-regular-font-family);
+            font-weight: var(--body1-regular-font-weight);
+            font-size: var(--body1-regular-font-size);
+            text-align: right;
+            line-height: var(--body1-regular-line-height);
+            letter-spacing: var(--body1-regular-letter-spacing);
+            white-space: nowrap;
+            font-style: var(--body1-regular-font-style);
+        }
+        .element-tutors-documents .group {
+            position: absolute;
+            width: 4.27%;
+            height: 83.33%;
+            top: 8.33%;
+            left: 94.02%;
+            display: flex;
+        }
+        .element-tutors-documents .frame {flex: 1;width: 20px;position: relative;}
+        .element-tutors-documents .vector {position: absolute;width: 66.67%;height: 66.67%;top: 12.92%;left: 12.92%;}
+        .element-tutors-documents .group-3 {width: 123px;height: 39px;display: flex;flex-direction: column;}
+        .element-tutors-documents .text-wrapper-3 {width: 119px;height: 21px;font-family: var(--body2-medium-font-family);font-weight: var(--body2-medium-font-weight);color: #ffffff;font-size: var(--body2-medium-font-size);letter-spacing: var(--body2-medium-letter-spacing);line-height: var(--body2-medium-line-height);white-space: nowrap;font-style: var(--body2-medium-font-style);}
+        .element-tutors-documents .text-wrapper-4 {width: 118px;height: 18px;opacity: 0.7;font-family: var(--body3-regular-font-family);font-weight: var(--body3-regular-font-weight);color: #ffffff;font-size: var(--body3-regular-font-size);letter-spacing: var(--body3-regular-letter-spacing);line-height: var(--body3-regular-line-height);white-space: nowrap;font-style: var(--body3-regular-font-style);}
+        .element-tutors-documents .icon {margin-top: 7px;width: 24px;height: 24px;position: relative;background: transparent;border: none;cursor: pointer;padding: 0;}
+        .element-tutors-documents .img {position: absolute;width: 50.00%;height: 25.00%;top: 33.33%;left: 20.83%;}
+        .element-tutors-documents .text-wrapper-5 {position: absolute;width: 6.46%;height: 37.78%;top: 31.11%;left: 4.86%;font-family: var(--heading-6-bold-font-family);font-weight: var(--heading-6-bold-font-weight);color: #ffffff;font-size: var(--heading-6-bold-font-size);letter-spacing: var(--heading-6-bold-letter-spacing);line-height: var(--heading-6-bold-line-height);white-space: nowrap;font-style: var(--heading-6-bold-font-style);}
+
+        .element-tutors-documents .footer .EDUFREE {position: absolute;width: 20.80%;height: 7.73%;top: 15.91%;left: 4.86%;font-family: var(--heading-6-bold-font-family);font-weight: var(--heading-6-bold-font-weight);color: #ffffff;font-size: var(--heading-6-bold-font-size);letter-spacing: var(--heading-6-bold-letter-spacing);line-height: var(--heading-6-bold-line-height);white-space: nowrap;font-style: var(--heading-6-bold-font-style);}
+        .element-tutors-documents .lorem-ipsum-dolor {position: absolute;width: 22.71%;height: 5.45%;top: 26.14%;left: 4.86%;opacity: 0.9;font-family: var(--body1-regular-font-family);font-weight: var(--body1-regular-font-weight);color: #ffffff;font-size: var(--body1-regular-font-size);letter-spacing: var(--body1-regular-letter-spacing);line-height: var(--body1-regular-line-height);font-style: var(--body1-regular-font-style);}
+        .element-tutors-documents .group-25 {position: absolute;width: 100%;height: 18.18%;top: 81.82%;left: 0;background-color: #ffffff;}
+        .element-tutors-documents .group-26 {position: relative;width: 84.71%;height: 33.75%;top: 33.75%;left: 5.14%;}
+        .element-tutors-documents .copyright-EDUFREE {position: absolute;width: 29.53%;height: 100%;top: 0;left: 0;font-family: var(--heading-8-medium-font-family);font-weight: var(--heading-8-medium-font-weight);color: var(--dark-blue);font-size: var(--heading-8-medium-font-size);letter-spacing: var(--heading-8-medium-letter-spacing);line-height: var(--heading-8-medium-line-height);white-space: nowrap;font-style: var(--heading-8-medium-font-style);}
+        .element-tutors-documents .navbar-item {position: absolute;width: 30.40%;height: 88.89%;top: 11.11%;left: 70.09%;}
+        .element-tutors-documents .text-wrapper-19 {position: absolute;width: 12.61%;height: 100%;top: 0;left: 0;font-family: var(--body1-medium-font-family);font-weight: var(--body1-medium-font-weight);color: #282938;font-size: var(--body1-medium-font-size);letter-spacing: var(--body1-medium-letter-spacing);line-height: var(--body1-medium-line-height);white-space: nowrap;font-style: var(--body1-medium-font-style);}
+        .element-tutors-documents .TENTANG-KAMI {position: absolute;width: 32.74%;height: 100%;top: 0;left: 22.11%;font-family: var(--body1-medium-font-family);font-weight: var(--body1-medium-font-weight);color: #282938;font-size: var(--body1-medium-font-size);letter-spacing: var(--body1-medium-letter-spacing);line-height: var(--body1-medium-line-height);white-space: nowrap;font-style: var(--body1-medium-font-style);}
+        .element-tutors-documents .KURSUS {position: absolute;width: 19.86%;height: 100%;top: 0;left: 63.11%;font-family: var(--body1-medium-font-family);font-weight: var(--body1-medium-font-weight);color: #282938;font-size: var(--body1-medium-font-size);letter-spacing: var(--body1-medium-letter-spacing);line-height: var(--body1-medium-line-height);white-space: nowrap;font-style: var(--body1-medium-font-style);}
+        .element-tutors-documents .text-wrapper-20 {position: absolute;width: 8.59%;height: 100%;top: 0;left: 89.26%;font-family: var(--body1-medium-font-family);font-weight: var(--body1-medium-font-weight);color: #282938;font-size: var(--body1-medium-font-size);letter-spacing: var(--body1-medium-letter-spacing);line-height: var(--body1-medium-line-height);white-space: nowrap;font-style: var(--body1-medium-font-style);}
+        .element-tutors-documents .info-wrapper {position: absolute;width: 29.17%;height: 20.00%;top: 61.82%;left: 4.86%;background-color: var(--yellow);}
+        .element-tutors-documents .info {position: relative;width: 86.49%;height: 65.91%;top: 17.05%;left: 7.14%;font-style: normal;}
+        .element-tutors-documents .text-wrapper-21 {position: absolute;width: 49.59%;height: 41.38%;top: 58.62%;left: 0;opacity: 0.8;font-family: var(--body1-regular-font-family);font-weight: var(--body1-regular-font-weight);color: var(--dark-blue);font-size: var(--body1-regular-font-size);letter-spacing: var(--body1-regular-letter-spacing);line-height: var(--body1-regular-line-height);white-space: nowrap;font-style: var(--body1-regular-font-style);}
+        .element-tutors-documents .text-wrapper-22 {position: absolute;width: 13.97%;height: 46.55%;top: 0;left: 0;font-family: var(--heading-8-medium-font-family);font-weight: var(--heading-8-medium-font-weight);color: var(--dark-blue);font-size: var(--heading-8-medium-font-size);letter-spacing: var(--heading-8-medium-letter-spacing);line-height: var(--heading-8-medium-line-height);white-space: nowrap;font-style: var(--heading-8-medium-font-style);}
+        .element-tutors-documents .element {position: absolute;width: 40.00%;height: 41.38%;top: 56.90%;left: 57.81%;opacity: 0.8;font-family: var(--body1-regular-font-family);font-weight: var(--body1-regular-font-weight);color: var(--dark-blue);font-size: var(--body1-regular-font-size);letter-spacing: var(--body1-regular-letter-spacing);line-height: var(--body1-regular-line-height);white-space: nowrap;font-style: var(--body1-regular-font-style);}
+        .element-tutors-documents .text-wrapper-23 {position: absolute;width: 26.57%;height: 46.55%;top: 0;left: 57.81%;font-family: var(--heading-8-medium-font-family);font-weight: var(--heading-8-medium-font-weight);color: var(--dark-blue);font-size: var(--heading-8-medium-font-size);letter-spacing: var(--heading-8-medium-letter-spacing);line-height: var(--heading-8-medium-line-height);white-space: nowrap;font-style: var(--heading-8-medium-font-style);}
+        .element-tutors-documents .group-27 {position: absolute;width: 597px;height: 144px;top: 2458px;left: 700px;}
+        .element-tutors-documents .support {position: absolute;width: 23.12%;height: 100%;top: 0;left: 0;}
+        .element-tutors-documents .group-27 a {text-decoration: none;color: inherit;}
+        .element-tutors-documents .text-wrapper-24 {position: absolute;width: 68.84%;height: 18.75%;top: 35.42%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .text-wrapper-25 {position: absolute;width: 44.20%;height: 18.75%;top: 56.94%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .text-wrapper-26 {position: absolute;width: 52.90%;height: 18.75%;top: 81.25%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .sosial-media {position: absolute;width: 94.20%;height: 20.83%;top: 0;left: 0;font-family: var(--heading-7-medium-font-family);font-weight: var(--heading-7-medium-font-weight);color: #ffffff;font-size: var(--heading-7-medium-font-size);letter-spacing: var(--heading-7-medium-letter-spacing);line-height: var(--heading-7-medium-line-height);white-space: nowrap;font-style: var(--heading-7-medium-font-style);}
+        .element-tutors-documents .support-2 {width: 21.94%;height: 100%;left: 79.40%;position: absolute;top: 0;}
+        .element-tutors-documents .tentang-kami {position: absolute;width: 61.83%;height: 18.75%;top: 35.42%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .ketentuan {position: absolute;width: 61.83%;height: 18.75%;top: 56.94%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .kebijakan-privasi {position: absolute;width: 93.89%;height: 18.75%;top: 81.25%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .DUKUNGAN {position: absolute;width: 68.70%;height: 20.83%;top: 0;left: 0;font-family: var(--heading-7-medium-font-family);font-weight: var(--heading-7-medium-font-weight);color: #ffffff;font-size: var(--heading-7-medium-font-size);letter-spacing: var(--heading-7-medium-letter-spacing);line-height: var(--heading-7-medium-line-height);white-space: nowrap;font-style: var(--heading-7-medium-font-style);}
+        .element-tutors-documents .support-3 {width: 20.60%;height: 75.69%;left: 38.19%;position: absolute;top: 0;}
+        .element-tutors-documents .merdeka-belajar {position: absolute;width: 95.12%;height: 24.77%;top: 46.79%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .finterpreneur {position: absolute;width: 89.43%;height: 24.77%;top: 75.23%;left: 0;font-family: var(--heading-8-regular-font-family);font-weight: var(--heading-8-regular-font-weight);color: #ffffff;font-size: var(--heading-8-regular-font-size);letter-spacing: var(--heading-8-regular-letter-spacing);line-height: var(--heading-8-regular-line-height);white-space: nowrap;font-style: var(--heading-8-regular-font-style);}
+        .element-tutors-documents .text-wrapper-27 {position: absolute;width: 72.36%;height: 27.52%;top: 0;left: 0;font-family: var(--heading-7-medium-font-family);font-weight: var(--heading-7-medium-font-weight);color: #ffffff;font-size: var(--heading-7-medium-font-size);letter-spacing: var(--heading-7-medium-letter-spacing);line-height: var(--heading-7-medium-line-height);white-space: nowrap;font-style: var(--heading-7-medium-font-style);}
+    </style>
+</head>
+<body>
+    <div class="element-tutors-documents">
+        <header class="navigasi-login">
+            <div class="text-wrapper-5">[LOGO]</div>
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="#home" class="text-wrapper">HOME</a>
+                <a href="#tutor" class="div">TUTOR</a> <a href="#courses" class="text-wrapper-2">COURSES</a>
+                <a href="#blog" class="BLOG">BLOG</a>
+                <button class="group" aria-label="Search">
+                    <span class="frame"><img class="vector" src="img/vector-12.svg" alt="" /></span>
+                </button>
+            </nav>
+            <div class="group-2">
+                <div class="group-3">
+                    <div class="text-wrapper-3">Hi, Son Tung MTP</div>
+                    <div class="text-wrapper-4">Frontend Developer</div>
+                </div>
+                <button class="icon" aria-label="Notifications">
+                    <img class="img" src="img/vector-10.svg" alt="" />
+                </button>
+            </div>
+            <img class="generic-avatar" src="img/style-avatar.svg" alt="User avatar" />
+        </header>
+        <div class="rectangle"></div>
+        <nav class="home-tutors" aria-label="Breadcrumb">Home&nbsp;&nbsp;&gt;&nbsp;&nbsp;Tutors</nav>
+        <div class="group-4">
+            <div class="rectangle-2"></div>
+            <label for="tutor-search" class="visually-hidden">Search for tutors</label>
+            <input 
+                type="search"
+                id="tutor-search"
+                class="text-wrapper-6"
+                placeholder="Find your tutor..."
+                aria-label="Find your tutor"
+            />
+        </div>
+        <nav class="navbar-2" aria-label="Tutor specialties categories">
+            <button class="active-category">POPULAR</button>
+            <button class="inactive-category">Software Eng.</button>
+            <button class="inactive-category">Data Science</button>
+            <button class="inactive-category">Marketing</button>
+            <button class="inactive-category">Management</button>
+            <button class="inactive-category">Networking</button>
+            <button class="inactive-category">Design</button>
+        </nav>
+        
+        <section class="tutor-grid" aria-label="Tutor profiles">
+            
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/unsplash-m-hrflhgabo.svg" alt="Tutor avatar: Jane Doe" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/vector-14.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,9</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">Jane Doe, PhD</h3>
+                    <p class="tutor-major">Computer Science, AI Specialist</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>5 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>150+ Students</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-11.svg" alt="Views icon" />
+                            <span>2.5k Profile Views</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">Machine Learning</span>
+                        <span class="tutor-course-tag">Python</span>
+                        <span class="tutor-course-tag">Big Data</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/pexels-lukas-590016-1.png" alt="Tutor avatar: Michael Chen" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/vector-5.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,7</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">Michael Chen</h3>
+                    <p class="tutor-major">Business & Digital Marketing</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>8 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>300+ Students</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">SEO/SEM</span>
+                        <span class="tutor-course-tag">Content Strategy</span>
+                        <span class="tutor-course-tag">Google Ads</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/pexels-olya-kobruseva-5561923-1.png" alt="Tutor avatar: Alex Johnson" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/vector-9.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,8</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">Alex Johnson</h3>
+                    <p class="tutor-major">Economics & Financial Modeling</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>6 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>210 Students</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">Data Analysis</span>
+                        <span class="tutor-course-tag">Microeconomics</span>
+                        <span class="tutor-course-tag">Excel</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/pexels-edmond-dant-s-8555673-1.png" alt="Tutor avatar: Sarah Lee" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/vector-13.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,6</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">Sarah Lee</h3>
+                    <p class="tutor-major">UX/UI Design & Prototyping</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>4 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>95 Students</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">Figma</span>
+                        <span class="tutor-course-tag">User Research</span>
+                        <span class="tutor-course-tag">Wireframing</span>
+                        <span class="tutor-course-tag">UI/UX</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/pexels-brett-sayles-2881232-1.png" alt="Tutor avatar: David Kim" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/vector-8.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,9</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">David Kim</h3>
+                    <p class="tutor-major">Project Management Professional</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>10 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>450+ Students</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">Agile/Scrum</span>
+                        <span class="tutor-course-tag">PMP Prep</span>
+                        <span class="tutor-course-tag">Risk Management</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="tutor-card">
+                <div class="tutor-card-header">
+                    <img class="tutor-avatar" src="img/pexels-picjumbocom-196645-1-1.png" alt="Tutor avatar: Emily White" />
+                    <div class="tutor-rating">
+                        <span class="bg"></span>
+                        <span class="star-icon"><img src="img/image.svg" alt="Star" style="width: 100%; height: 100%;"/></span>
+                        <span class="rating-text">4,7</span>
+                    </div>
+                </div>
+                <div class="tutor-content">
+                    <h3 class="tutor-name">Emily White</h3>
+                    <p class="tutor-major">Full-Stack Web Development</p>
+                    <div class="tutor-stats">
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-7.svg" alt="Experience icon" />
+                            <span>7 yrs Exp</span>
+                        </div>
+                        <div class="tutor-stat-item">
+                            <img src="img/vector-3.svg" alt="Students icon" />
+                            <span>180 Students</span>
+                        </div>
+                    </div>
+                    <div class="tutor-courses-list">
+                        <span class="tutor-course-tag">JavaScript</span>
+                        <span class="tutor-course-tag">React.js</span>
+                        <span class="tutor-course-tag">Node.js</span>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
+        
+        <nav class="group-5" aria-label="Pagination">
+            <button class="group-6" aria-label="Page 1" aria-current="page">
+                <span class="fill"></span><span class="text-wrapper-14">1</span>
+            </button>
+            <button class="group-7" aria-label="Page 2">
+                <span class="fill-2"></span><span class="text-wrapper-15">2</span>
+            </button>
+            <button class="group-7" aria-label="Page 3">
+                <span class="fill-2"></span><span class="text-wrapper-15">3</span>
+            </button>
+            <span class="text-wrapper-16">. . .</span>
+            <button class="group-8" aria-label="Page 8">
+                <span class="fill-2"></span><span class="text-wrapper-17">8</span>
+            </button>
+        </nav>
+        
+        <footer class="footer">
+            <div class="rectangle-4"></div>
+            <div class="EDUFREE">[HCMUT TUTOR SYSTEM]</div>
+            <p class="lorem-ipsum-dolor">STRIVE FOR GREATNESS</p>
+            <div class="group-25">
+                <div class="group-26">
+                    <p class="copyright-EDUFREE">© Copyright HCMUT TUTORSYSTEM 2025</p>
+                    <nav class="navbar-item" aria-label="Footer navigation">
+                        <a href="#home" class="text-wrapper-19">HOME</a>
+                        <a href="#about" class="TENTANG-KAMI">ABOUT CENTER</a>
+                        <a href="#courses" class="KURSUS">COURSES</a>
+                        <a href="#faq" class="text-wrapper-20">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <address class="info">
+                    <div class="text-wrapper-22">Email</div>
+                    <a href="mailto:contact@website.com" class="text-wrapper-21">contact@website.com</a>
+                    <div class="text-wrapper-23">Telephone</div>
+                    <a href="tel:+84686868686868" class="element">+84 6868 6868 68</a>
+                </address>
+            </div>
+            <div class="group-27">
+                <nav class="support" aria-label="Social media">
+                    <h3 class="sosial-media">Social Media</h3>
+                    <a href="#instagram" class="text-wrapper-24">Instagram</a>
+                    <a href="#twitter" class="text-wrapper-25">Twitter</a>
+                    <a href="#linkedin" class="text-wrapper-26">LinkedIn</a>
+                </nav>
+                <nav class="support-3" aria-label="Program">
+                    <h3 class="text-wrapper-27">Program</h3>
+                    <a href="#free-learn" class="merdeka-belajar">Free to Learn</a>
+                    <a href="#free-take" class="finterpreneur">Free to Take</a>
+                </nav>
+                <nav class="support-2" aria-label="Support">
+                    <h3 class="DUKUNGAN">SUPPORT</h3>
+                    <a href="#about" class="tentang-kami">About Us</a>
+                    <a href="#provision" class="ketentuan">Provision</a>
+                    <a href="#privacy" class="kebijakan-privasi">Privacy Policy</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

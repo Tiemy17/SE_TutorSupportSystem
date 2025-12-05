@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>HCMUT TutorSystem - Login</title>
+    <!-- Load Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply Poppins as the default font */
+        html { font-family: 'Poppins', sans-serif; }
+
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #d84040; }
+        ::-webkit-scrollbar-thumb { background: #fcd980; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #fce49a; }
+    </style>
+    <!-- Custom Tailwind Configuration based on provided variables -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#D84040',
+                        'accent-yellow': '#FCD980',
+                        'dark-text': '#282938',
+                        'dark-overlay': 'rgba(28, 30, 83, 0.6)', /* #1c1e5399 */
+                        'bg-white': '#FFFFFF',
+                        'text-grey': 'rgba(244, 246, 252, 0.5)', /* Adjusted to match opacity requirement */
+                        'link-grey': 'rgba(244, 246, 252, 1)',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    fontSize: {
+                        'h1': ['42px', { lineHeight: '67.2px' }],
+                        'h2': ['28px', { lineHeight: '47.6px' }],
+                        'h7': ['20px', { lineHeight: '150%' }],
+                        'h8': ['18px', { lineHeight: '150%' }],
+                        'body1': ['16px', { lineHeight: '150%' }],
+                        'body2': ['14px', { lineHeight: '150%' }],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-white min-h-screen">
+    <!-- Main Container -->
+    <div class="flex flex-col min-h-screen">
+
+        <!-- Navigation Bar (Always Visible) -->
+        <nav class="flex items-center space-x-2 md:space-x-4 p-4 md:p-8 lg:p-16" aria-label="Main navigation">
+            <a href="#" class="w-5 h-4 relative transform rotate-180" aria-label="Go back to homepage">
+                <!-- SVG for back icon (vector.svg) - using an inline SVG to keep it single-file -->
+                <svg class="absolute w-full h-full text-dark-text/80" fill="none" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9167 15.0833L5.83337 7.99999L12.9167 0.916656" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <span class="text-h7 font-semibold text-dark-text/80">Homepage</span>
+        </nav>
+
+        <!-- Main Content (Login View) -->
+        <main id="login-view" class="flex-1 flex flex-col lg:flex-row w-full mx-auto overflow-hidden">
+            
+            <!-- Left Section (Image and Title) -->
+            <section class="lg:w-1/2 flex relative min-h-[30vh] lg:min-h-full" aria-label="Visual introduction">
+                <img
+                    class="absolute inset-0 w-full h-full object-cover"
+                    src="https://placehold.co/1000x1000/1c1e53/ffffff?text=Workspace+Image"
+                    alt="Background image showing a workspace with laptop and mouse"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1000x1000/1c1e53/ffffff?text=Workspace+Image';"
+                />
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-dark-overlay" aria-hidden="true"></div>
+                
+                <!-- Heading -->
+                <header class="relative p-12 lg:p-24 self-start">
+                    <h1 class="text-h1 font-semibold text-white">HCMUT TutorSystem</h1>
+                </header>
+            </section>
+
+            <!-- Right Section (Login Form) -->
+            <section class="lg:w-1/2 bg-primary-red flex items-center justify-center p-8 md:p-12 lg:p-0 min-h-[70vh] lg:min-h-full">
+                <div class="w-full max-w-md p-6 md:p-10">
+                    <h2 class="text-h2 font-semibold text-white mb-8 text-center">Login</h2>
+                    
+                    <form id="loginForm" method="post" action="/login" novalidate class="space-y-6">
+                        
+                        <!-- Email Field -->
+                        <div class="relative">
+                            <label for="login-email" class="text-body1 text-link-grey/50 absolute top-1/2 -translate-y-1/2 left-4 transition-all duration-300 pointer-events-none" id="label-login-email">Email</label>
+                            <input
+                                type="email"
+                                id="login-email"
+                                name="email"
+                                class="w-full bg-transparent border-2 border-link-grey/10 text-white rounded-lg p-4 pt-6 focus:ring-accent-yellow focus:border-accent-yellow outline-none text-body1"
+                                required
+                                autocomplete="email"
+                                aria-required="true"
+                                placeholder=" "
+                                onfocus="moveLabel('label-login-email')"
+                                onblur="checkInput('login-email', 'label-login-email')"
+                            />
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="relative">
+                            <label for="login-password" class="text-body1 text-link-grey/50 absolute top-1/2 -translate-y-1/2 left-4 transition-all duration-300 pointer-events-none" id="label-login-password">Password</label>
+                            <input
+                                type="password"
+                                id="login-password"
+                                name="password"
+                                class="w-full bg-transparent border-2 border-link-grey/10 text-white rounded-lg p-4 pt-6 focus:ring-accent-yellow focus:border-accent-yellow outline-none text-body1"
+                                required
+                                autocomplete="current-password"
+                                aria-required="true"
+                                placeholder=" "
+                                onfocus="moveLabel('label-login-password')"
+                                onblur="checkInput('login-password', 'label-login-password')"
+                            />
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex items-center space-x-2 text-link-grey/40 text-body2">
+                            <input type="checkbox" id="remember" name="remember" class="h-4 w-4 rounded border-link-grey/40 bg-transparent text-accent-yellow focus:ring-accent-yellow cursor-pointer" />
+                            <label for="remember" class="cursor-pointer">Save information for next time</label>
+                        </div>
+                        
+                        <div class="h-4"></div> <!-- Placeholder for spacing -->
+                    </form>
+                    
+                    <!-- Login Button -->
+                    <button type="submit" form="loginForm" class="w-full h-14 relative group mt-8" aria-label="Login to your account">
+                        <div class="absolute inset-0 bg-accent-yellow rounded-lg transition-all duration-200 group-hover:bg-opacity-90 group-active:scale-[0.99]" aria-hidden="true"></div>
+                        <span class="relative text-dark-text text-h8 font-bold flex items-center justify-center h-full">LOGIN</span>
+                    </button>
+                    
+                    <!-- Registration Link -->
+                    <p class="text-center mt-6 text-body2 text-white">
+                        <span class="opacity-80">Do not have an account ?</span>
+                        <a href="register.html" class="text-white font-bold underline hover:no-underline ml-1">REGISTER</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript for Input Labels -->
+    <script>
+        // Function to handle moving the floating label on input focus
+        function moveLabel(labelId) {
+            const label = document.getElementById(labelId);
+            if (label) {
+                label.classList.add('transform', 'scale-75', '-translate-y-full', 'top-0', 'left-2', 'pt-2');
+            }
+        }
+
+        // Function to handle resetting the floating label on input blur if empty
+        function checkInput(inputId, labelId) {
+            const input = document.getElementById(inputId);
+            const label = document.getElementById(labelId);
+            if (input && label && input.value === '') {
+                label.classList.remove('transform', 'scale-75', '-translate-y-full', 'top-0', 'left-2', 'pt-2');
+            }
+        }
+
+        // Initialize: Ensure labels are correctly positioned if inputs are pre-filled (e.g., by browser autocomplete)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('input').forEach(input => {
+                const label = document.getElementById(`label-${input.id}`);
+                if (input.value !== '' && label) {
+                    moveLabel(`label-${input.id}`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

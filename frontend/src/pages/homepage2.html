@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>HCMUT Tutor System - Tutors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Baloo+Paaji+2:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* CSS Reset and Global Styles */
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        html,body {
+            margin: 0px;
+            height: 100%;
+        }
+
+        button:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline: -webkit-focus-ring-color auto 5px !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Root Variables (for reference/custom styles) */
+        :root {
+            --dark-blue: rgba(40, 41, 56, 1);
+            --royal-blue: rgba(36, 5, 242, 1);
+            /* ... other font variables remain unchanged ... */
+        }
+
+        /* Apply Poppins as the default font, Baloo Paaji for the hero H1 */
+        html { font-family: 'Poppins', sans-serif; }
+        .font-baloo { font-family: 'Baloo Paaji 2', cursive; }
+
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #d84040; }
+        ::-webkit-scrollbar-thumb { background: #fcd980; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #fce49a; }
+
+        /* Custom style for the liquid glass effect */
+        .liquid-glass-effect {
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px) brightness(104%) saturate(95%);
+            -webkit-backdrop-filter: blur(10px) brightness(104%) saturate(95%);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 
+                        inset 1px 0 0 rgba(255, 255, 255, 0.32),
+                        inset 0 -1px 6px rgba(0, 0, 0, 0.2), 
+                        inset -1px 0 6px rgba(0, 0, 0, 0.16);
+            border-radius: 2.125rem; /* ~34px */
+        }
+        
+        /* Merged Semantic Styles */
+        .footer a:hover, .footer a:focus,
+        .navbar-item a:hover, .navbar-item a:focus {
+            text-decoration: underline;
+        }
+
+        /* Tutor/Course Card Hover Effect */
+        .tutor-card {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .tutor-card:hover {
+            transform: translateY(-4px);
+        }
+        .tutor-card:focus-within {
+            outline: 2px solid var(--royal-blue);
+            outline-offset: 4px;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#D84040',
+                        'accent-yellow': '#FCD980',
+                        'dark-blue': '#282938',
+                        'light-grey': '#F4F6FC', // --grey
+                    },
+                    fontSize: {
+                        'h1-hero': ['4rem', { lineHeight: '102.4px', letterSpacing: '0.32px' }], // 64px
+                        'h2': ['2.375rem', { lineHeight: '57px', letterSpacing: '0.3px' }], // 38px
+                        'h3': ['1.5rem', { lineHeight: '36px' }], // 24px
+                        'h6': ['1.25rem', { lineHeight: '30px' }], // 20px
+                        'body1': ['1rem', { lineHeight: '150%' }], // 16px
+                        'body2': ['0.875rem', { lineHeight: '150%' }], // 14px
+                        'body3': ['0.75rem', { lineHeight: '150%' }], // 12px
+                        'h8': ['1.125rem', { lineHeight: '150%' }], // 18px
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white min-h-screen antialiased">
+    <main class="min-h-screen">
+        
+        <nav class="bg-primary-red py-4 px-4 md:px-8 lg:px-16 flex items-center justify-between shadow-lg" role="navigation" aria-label="Main navigation">
+            <div class="text-h3 font-bold text-white">[LOGO]</div>
+
+            <ul class="hidden lg:flex space-x-8 text-body1 font-medium text-white list-none p-0 m-0">
+                <li><a href="index.html" class="hover:text-accent-yellow">HOME</a></li>
+                <li class="font-medium border-b-2 border-accent-yellow">TUTOR</li>
+                <li><a href="courses.html" class="hover:text-accent-yellow">COURSES</a></li>
+                <li><a href="blog.html" class="hover:text-accent-yellow">BLOG</a></li>
+            </ul>
+            
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                <div class="w-5 h-5 relative cursor-pointer">
+                    <svg class="w-full h-full text-white" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 14.5L18 18M16 8.5C16 12.6421 12.6421 16 8.5 16C4.35786 16 1 12.6421 1 8.5C1 4.35786 4.35786 1 8.5 1C12.6421 1 16 4.35786 16 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                
+                <img class="w-10 h-10 rounded-full" src="https://placehold.co/40x40/fcd980/282938?text=AV" alt="User avatar" />
+
+                <div class="flex flex-col text-white text-right">
+                    <div class="text-body2 font-medium">Hi, Son Tung MTP</div>
+                    <div class="text-body3 opacity-70">Frontend Developer</div>
+                </div>
+
+                <button class="w-6 h-6 relative" aria-label="User menu">
+                    <svg class="w-full h-full text-white" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M4 18h16M4 6h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </nav>
+
+        <header class="bg-primary-red pt-12 pb-24 md:py-24 lg:pb-0 lg:h-[579px] flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-16 relative overflow-hidden">
+            <div class="text-white lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left pt-12 lg:pt-0 pb-16 lg:pb-24 z-20">
+                <h1 class="text-h1-hero font-baloo text-white max-w-xl">FIND YOUR PERFECT TUTOR</h1>
+                <p class="text-h3 font-normal mt-16 mb-12">Expert guidance tailored for HCMUT students!</p>
+                
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 items-center w-full max-w-xs sm:max-w-none justify-center lg:justify-start">
+                    <a href="#" class="w-48 h-14 relative group bg-accent-yellow rounded-md flex items-center justify-center font-medium text-dark-blue text-body1 hover:opacity-90 transition duration-200" aria-label="Book a tutor session">
+                        BOOK NOW
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 flex justify-center lg:justify-end lg:absolute lg:right-16 lg:bottom-12 z-10">
+                
+
+[Image of University Students collaborating with a tutor]
+
+            </div>
+        </header>
+
+        <div class="w-full h-24 bg-light-grey" aria-hidden="true"></div>
+        
+        <button class="absolute top-[690px] left-1/2 transform -translate-x-1/2 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center z-30 border-2 border-primary-red hover:bg-light-grey transition duration-200" aria-label="Scroll down">
+            <svg class="w-10 h-10 text-primary-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+
+        <section class="max-w-7xl mx-auto py-24 px-4 md:px-8" aria-labelledby="tutors-heading">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end pb-8 border-b border-gray-300">
+                <h2 id="tutors-heading" class="text-h2 font-semibold text-dark-blue mb-4 md:mb-0">Featured Tutors 🎓</h2>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 text-dark-blue text-h8 font-medium hover:text-primary-red transition duration-200" aria-label="Filter by subject">
+                        <span>Subject</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="w-32 h-12 relative group bg-accent-yellow rounded-md flex items-center justify-center font-medium text-dark-blue text-body1 hover:opacity-90 transition duration-200" aria-label="View all tutors">
+                        VIEW ALL
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-16 grid gap-8 lg:gap-16 grid-cols-1 md:grid-cols-3">
+                
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden relative tutor-card">
+                    <img class="w-full h-56 object-cover" src="https://placehold.co/386x236/d84040/ffffff?text=Dr.+Thanh+Nguyen" alt="Dr. Thanh Nguyen profile picture" />
+                    <div class="p-4">
+                        <h3 class="text-h3 font-medium text-dark-blue truncate">Dr. Thanh Nguyen</h3>
+                        <p class="text-body1 text-dark-blue opacity-70 mt-1 h-12 line-clamp-2 font-medium">Teaching: **Calculus I & II, Linear Algebra**</p>
+                        <div class="text-body2 text-dark-blue opacity-90 mt-4 space-y-1">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📍</span> 
+                                <span>**Education:** PhD in Applied Math</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📚</span> 
+                                <span>**Major:** Computational Science</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">⭐</span> 
+                                <span>**Experience:** 8 years of tutoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-primary-red p-1 px-3 rounded-full flex items-center space-x-1 text-white text-body3 font-medium">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <span>5.0</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden relative tutor-card">
+                    <img class="w-full h-56 object-cover" src="https://placehold.co/386x236/d84040/ffffff?text=Ms.+Huong+Tran" alt="Ms. Huong Tran profile picture" />
+                    <div class="p-4">
+                        <h3 class="text-h3 font-medium text-dark-blue truncate">Ms. Huong Tran</h3>
+                        <p class="text-body1 text-dark-blue opacity-70 mt-1 h-12 line-clamp-2 font-medium">Teaching: **C++ Programming, Data Structures**</p>
+                        <div class="text-body2 text-dark-blue opacity-90 mt-4 space-y-1">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📍</span> 
+                                <span>**Education:** Master of Computer Science</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📚</span> 
+                                <span>**Major:** Software Engineering</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">⭐</span> 
+                                <span>**Experience:** 4 years of tutoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-primary-red p-1 px-3 rounded-full flex items-center space-x-1 text-white text-body3 font-medium">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <span>4.8</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden relative tutor-card">
+                    <img class="w-full h-56 object-cover" src="https://placehold.co/386x236/d84040/ffffff?text=Mr.+Quang+Le" alt="Mr. Quang Le profile picture" />
+                    <div class="p-4">
+                        <h3 class="text-h3 font-medium text-dark-blue truncate">Mr. Quang Le</h3>
+                        <p class="text-body1 text-dark-blue opacity-70 mt-1 h-12 line-clamp-2 font-medium">Teaching: **Thermodynamics, Fluid Mechanics**</p>
+                        <div class="text-body2 text-dark-blue opacity-90 mt-4 space-y-1">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📍</span> 
+                                <span>**Education:** BEng (Hons) Mechanical Eng.</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📚</span> 
+                                <span>**Major:** Mechanical Engineering</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">⭐</span> 
+                                <span>**Experience:** 6 years of industry mentorship</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-primary-red p-1 px-3 rounded-full flex items-center space-x-1 text-white text-body3 font-medium">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <span>4.7</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden relative tutor-card">
+                    <img class="w-full h-56 object-cover" src="https://placehold.co/386x236/1c1e53/ffffff?text=New+Tutor+Coming+Soon" alt="New tutor placeholder" />
+                    <div class="p-4">
+                        <h3 class="text-h3 font-medium text-dark-blue truncate">Nguyen Thi A</h3>
+                        <p class="text-body1 text-dark-blue opacity-70 mt-1 h-12 line-clamp-2 font-medium">Teaching: **Chemistry, Physics**</p>
+                        <div class="text-body2 text-dark-blue opacity-90 mt-4 space-y-1">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📍</span> 
+                                <span>**Education:** BSc in Chemical Engineering</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">📚</span> 
+                                <span>**Major:** Chemical Engineering</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 text-primary-red">⭐</span> 
+                                <span>**Experience:** 2 years (HCMUT Alumni)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-primary-red p-1 px-3 rounded-full flex items-center space-x-1 text-white text-body3 font-medium">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <span>4.5</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer class="bg-primary-red pt-16 mt-24" role="contentinfo">
+            <div class="max-w-7xl mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 text-white">
+                    
+                    <div class="space-y-4">
+                        <div class="text-h3 font-bold">[HCMUT TUTOR SYSTEM]</div>
+                        <p class="text-body1 opacity-90">STRIVE FOR GREATNESS</p>
+                        
+                        <address class="not-italic bg-accent-yellow p-4 rounded-lg text-dark-blue mt-8">
+                            <div class="grid grid-cols-2 gap-y-2">
+                                <div class="font-medium text-body2">Email</div>
+                                <div class="font-medium text-body2">Telephone</div>
+                                <a href="mailto:contact@website.com" class="text-body1 opacity-80">contact@website.com</a>
+                                <a href="tel:+84686868686868" class="text-body1 opacity-80">+84 6868 6868 68</a>
+                            </div>
+                        </address>
+                    </div>
+
+                    <div class="flex justify-between md:col-span-2">
+                        <nav class="space-y-3" aria-label="Program links">
+                            <div class="text-h6 font-medium uppercase">Program</div>
+                            <a href="#" class="block text-body1 hover:underline">Free to Learn</a>
+                            <a href="#" class="block text-body1 hover:underline">Free to Take</a>
+                        </nav>
+                        
+                        <nav class="space-y-3" aria-label="Social media links">
+                            <div class="text-h6 font-medium uppercase">Social Media</div>
+                            <a href="#" class="block text-body1 hover:underline">Instagram</a>
+                            <a href="#" class="block text-body1 hover:underline">Twitter</a>
+                            <a href="#" class="block text-body1 hover:underline">LinkedIn</a>
+                        </nav>
+                    </div>
+
+                    <nav class="space-y-3" aria-label="Support links">
+                        <div class="text-h6 font-medium uppercase">Support</div>
+                        <a href="#" class="block text-body1 hover:underline">About Us</a>
+                        <a href="#" class="block text-body1 hover:underline">Provision</a>
+                        <a href="#" class="block text-body1 hover:underline">Privacy Policy</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="bg-white py-4 mt-8">
+                <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-dark-blue text-body1">
+                    <p class="font-medium text-body2">© Copyright HCMUT TUTORSYSTEM 2025</p>
+                    <nav class="flex space-x-6 mt-2 md:mt-0" aria-label="Footer navigation">
+                        <a href="#" class="font-medium hover:text-primary-red">HOME</a>
+                        <a href="#" class="font-medium hover:text-primary-red">ABOUT CENTER</a>
+                        <a href="#" class="font-medium hover:text-primary-red">COURSES</a>
+                        <a href="#" class="font-medium hover:text-primary-red">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

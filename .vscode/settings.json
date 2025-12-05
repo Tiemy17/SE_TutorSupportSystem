@@ -1,0 +1,20 @@
+{
+  "folder-path-color.folders": [
+    {
+      "path": "backend",
+      "symbol": "H",
+      "tooltip": "Host",
+      "col": "red"
+    },
+    // {
+    //   "path": "frontend",
+    //   "symbol": "02",
+    //   "tooltip": "App 02",
+    //   "color": "yellow"
+    // },
+    {
+      "path": "frontend/src/pages",
+      "color": "blue"
+    }
+  ]
+}

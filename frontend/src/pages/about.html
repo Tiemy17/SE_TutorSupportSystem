@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Web Programming - HCMUT Tutor System</title>
+    <style>
+        /* CSS Reset */
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        
+        /* CSS Variables (from styleguide.css) */
+        :root {
+            --dark-blue: rgba(40, 41, 56, 1);
+            --royal-blue: #2405f2; /* Explicitly defining royal-blue */
+            --red-hcmut: #d84040; /* Explicitly defining the primary red color */
+            --yellow-accent: #fcd980; /* Explicitly defining the accent yellow color */
+            --light-bg: #eef4fa; /* Explicitly defining the light background color */
+            
+            --heading-4-medium-font-family: "Poppins", Helvetica;
+            --heading-4-medium-font-weight: 500;
+            --heading-4-medium-font-size: 32px;
+            --heading-4-medium-letter-spacing: 0.16px;
+            --heading-4-medium-line-height: 139.9999976158142%;
+            --heading-4-medium-font-style: normal;
+            
+            --body-2-font-family: "Poppins", Helvetica;
+            --body-2-font-weight: 500;
+            --body-2-font-size: 16px;
+            --body-2-letter-spacing: 0px;
+            --body-2-line-height: 28px;
+            --body-2-font-style: normal;
+            
+            --heading-8-medium-font-family: "Poppins", Helvetica;
+            --heading-8-medium-font-weight: 500;
+            --heading-8-medium-font-size: 18px;
+            --heading-8-medium-letter-spacing: 0.09px;
+            --heading-8-medium-line-height: 150%;
+            --heading-8-medium-font-style: normal;
+            
+            --heading-6-bold-font-family: "Poppins", Helvetica;
+            --heading-6-bold-font-weight: 700;
+            --heading-6-bold-font-size: 24px;
+            --heading-6-bold-letter-spacing: 0.12px;
+            --heading-6-bold-line-height: 139.9999976158142%;
+            --heading-6-bold-font-style: normal;
+            
+            --body1-regular-font-family: "Poppins", Helvetica;
+            --body1-regular-font-weight: 400;
+            --body1-regular-font-size: 16px;
+            --body1-regular-letter-spacing: 0px;
+            --body1-regular-line-height: 150%;
+            --body1-regular-font-style: normal;
+            
+            --body1-medium-font-family: "Poppins", Helvetica;
+            --body1-medium-font-weight: 500;
+            --body1-medium-font-size: 16px;
+            --body1-medium-letter-spacing: 0px;
+            --body1-medium-line-height: 150%;
+            --body1-medium-font-style: normal;
+            
+            --heading-8-regular-font-family: "Poppins", Helvetica;
+            --heading-8-regular-font-weight: 400;
+            --heading-8-regular-font-size: 18px;
+            --heading-8-regular-letter-spacing: 0.09px;
+            --heading-8-regular-line-height: 150%;
+            --heading-8-regular-font-style: normal;
+            
+            --heading-7-medium-font-family: "Poppins", Helvetica;
+            --heading-7-medium-font-weight: 500;
+            --heading-7-medium-font-size: 20px;
+            --heading-7-medium-letter-spacing: 0.1px;
+            --heading-7-medium-line-height: 150%;
+            --heading-7-medium-font-style: normal;
+            
+            --heading-8-semibold-font-family: "Poppins", Helvetica;
+            --heading-8-semibold-font-weight: 600;
+            --heading-8-semibold-font-size: 18px;
+            --heading-8-semibold-letter-spacing: 0.09px;
+            --heading-8-semibold-line-height: 150%;
+            --heading-8-semibold-font-style: normal;
+        }
+
+        /* Base styles */
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0px;
+            height: 100%;
+        }
+        
+        /* Focus Styles (Accessibility) */
+        button:focus-visible, a:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline-offset: 2px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit; /* Ensure links inherit color unless specified */
+        }
+        button {
+            cursor: pointer;
+        }
+
+        /* --- Element About (Main Container) --- */
+        .element-about {
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            min-width: 1440px;
+            min-height: 3769px;
+            position: relative;
+        }
+        
+        /* Header & Navigation */
+        .element-about .navigasi-login {
+            position: absolute;
+            top: -8px; /* Adjusted to original CSS value */
+            left: 0;
+            width: 1440px;
+            height: 90px;
+            background-color: var(--red-hcmut);
+        }
+        .element-about .rectangle {
+            top: 90px;
+            width: 1440px;
+            height: 86px;
+            background-color: var(--light-bg);
+            position: absolute;
+            left: 0;
+        }
+        .element-about .text-wrapper-21 { /* [LOGO] */
+            position: absolute;
+            width: 6.46%;
+            height: 37.78%;
+            top: 31.11%;
+            left: 4.86%;
+            font-family: var(--heading-6-bold-font-family);
+            font-weight: var(--heading-6-bold-font-weight);
+            color: #ffffff;
+            font-size: var(--heading-6-bold-font-size);
+            letter-spacing: var(--heading-6-bold-letter-spacing);
+            line-height: var(--heading-6-bold-line-height);
+            white-space: nowrap;
+            font-style: var(--heading-6-bold-font-style);
+        }
+        .element-about .navbar {
+            position: absolute;
+            width: 32.50%;
+            height: 26.67%;
+            top: 36.67%;
+            left: 34.03%;
+        }
+        .element-about .navbar a {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+        .element-about .navbar a:hover {
+            text-decoration: underline;
+        }
+        .element-about .text-wrapper-18 { /* HOME */
+            width: 10.04%; left: 0; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); font-size: var(--body1-medium-font-size); letter-spacing: var(--body1-medium-letter-spacing); line-height: var(--body1-medium-line-height); font-style: var(--body1-medium-font-style);
+        }
+        .element-about .text-wrapper-19 { /* TUTOR */
+            width: 10.90%; left: 22.86%; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); text-align: center; font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); font-style: var(--body1-regular-font-style);
+        }
+        .element-about .text-wrapper-20 { /* COURSES - Highlighted for this page */
+            width: 16.03%; left: 46.79%; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); text-align: center; font-size: var(--body1-medium-font-size); letter-spacing: var(--body1-medium-letter-spacing); line-height: var(--body1-medium-line-height); font-style: var(--body1-medium-font-style);
+        }
+        .element-about .BLOG {
+            width: 18.16%; left: 67.31%; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); text-align: right; font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); font-style: var(--body1-regular-font-style);
+        }
+
+        /* Search Button */
+        .element-about .frame-wrapper {
+            position: absolute; width: 4.27%; height: 83.33%; top: 8.33%; left: 94.02%; display: flex; background: none; border: none; padding: 0; cursor: pointer;
+        }
+        .element-about .frame-wrapper:hover { opacity: 0.8; }
+        .element-about .frame { flex: 1; width: 20px; position: relative; }
+        .element-about .vector { position: absolute; width: 66.67%; height: 66.67%; top: 12.92%; left: 12.92%; }
+
+        /* Notification, Messages, Avatar */
+        .element-about .group-6 {
+            position: absolute; top: 26px; left: 1175px; width: 186px; height: 39px; display: flex; gap: 40.2px;
+        }
+        .element-about .img { width: 124.84px; height: 45.12px; margin-left: -3.1px; } /* Seems like a placeholder image container */
+        .element-about .icon { margin-top: 7px; width: 24px; height: 24px; position: relative; background: none; border: none; padding: 0; cursor: pointer; }
+        .element-about .icon:hover { opacity: 0.8; }
+        .element-about .vector-2 { position: absolute; width: 50.00%; height: 25.00%; top: 33.33%; left: 20.83%; }
+        
+        .element-about .generic-avatar {
+            position: absolute; top: 25px; left: 1125px; width: 40px; height: 40px; background: none; border: none; padding: 0; cursor: pointer;
+        }
+        .element-about .generic-avatar:hover { opacity: 0.8; }
+        .element-about .generic-avatar img { width: 100%; height: 100%; display: block; border-radius: 50%; }
+
+        /* User Dropdown */
+        .element-about .user-dropbox {
+            position: absolute; top: 90px; left: 1260px; width: 146px; height: 103px; display: none; /* Controlled by aria-expanded/aria-hidden */
+            flex-direction: column; gap: 12px; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0px 4px 20px 5px #00000040; z-index: 1000;
+        }
+        .element-about .user-dropbox[aria-hidden="false"] { display: flex; }
+        .element-about .text-wrapper-23, .element-about .text-wrapper-24 {
+            font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: #000000; font-size: 16px; letter-spacing: 0; line-height: 24px; white-space: nowrap; text-decoration: none;
+        }
+        .element-about .text-wrapper-23 { margin-left: 26px; width: 93px; height: 24px; margin-top: 14px; }
+        .element-about .text-wrapper-24 { margin-left: 39px; width: 59px; height: 24px; }
+        .element-about .text-wrapper-23:hover, .element-about .text-wrapper-24:hover { text-decoration: underline; }
+        .element-about .frame-2 { height: 1px; background-color: #4f4f4f; }
+
+        /* Breadcrumb */
+        .element-about .home-courses-web {
+            position: absolute; top: 119px; right: 553px; width: 817px; opacity: 0.7; font-family: var(--body-2-font-family); font-weight: var(--body-2-font-weight); color: var(--dark-blue); font-size: var(--body-2-font-size); letter-spacing: var(--body-2-letter-spacing); line-height: var(--body-2-line-height); font-style: var(--body-2-font-style);
+        }
+        .element-about .home-courses-web a {
+            color: var(--dark-blue); text-decoration: none;
+        }
+        .element-about .home-courses-web a:hover {
+            text-decoration: underline;
+        }
+        .element-about .home-courses-web span {
+            font-weight: 600; /* Highlight current page */
+            opacity: 1;
+        }
+
+        /* Course Header */
+        .element-about .blog-header {
+            position: absolute; top: 344px; right: 317px; width: 940px; height: 67px; display: flex; justify-content: flex-end;
+        }
+        .element-about .text-wrapper-2 { /* WEB PROGAMMING */
+            width: 938px; height: 67px; margin-right: 2px; font-family: "Poppins-SemiBold", Helvetica; font-weight: 600; color: var(--dark-blue); font-size: 42px; letter-spacing: 0.21px; line-height: 67.2px;
+        }
+        .element-about .p {
+            position: absolute; top: 419px; right: 440px; width: 817px; opacity: 0.7; font-family: "Poppins-Medium", Helvetica; font-weight: 500; color: var(--dark-blue); font-size: 16px; letter-spacing: 0; line-height: 27.2px;
+        }
+        .element-about .group-2 { /* Course Cover Image */
+            position: absolute; top: 519px; left: 182px; width: 1078px; height: 641px; background-image: url(./img/cover.png); background-size: 100% 100%;
+        }
+
+        /* Keywords/Section Navigation */
+        .element-about .keywords {
+            position: absolute; top: 1212px; left: 180px; width: 1082px; height: 84px;
+        }
+        .element-about .group-3 {
+            position: absolute; top: 32px; right: 57px; width: 972px; height: 27px; display: flex; justify-content: flex-end;
+        }
+        .element-about .group-3 a {
+            opacity: 0.7; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); text-align: justify; letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style); margin-right: 60px;
+        }
+        .element-about .group-3 a:hover {
+            opacity: 1;
+        }
+        .element-about .text-wrapper-3 { /* Description - Active State */
+            color: var(--royal-blue); margin-right: 60px;
+        }
+        .element-about .text-wrapper-4 { margin-right: 112px; } /* Introduction */
+        .element-about .text-wrapper-5 { margin-right: 112px; } /* Syllabus */
+        .element-about .text-wrapper-6 { margin-right: 112px; } /* Content */
+        .element-about .text-wrapper-7 { margin-right: 94px; } /* Review */
+        .element-about .text-wrapper-8 { margin-right: 12px; } /* FAQ */
+        .element-about .line {
+            position: absolute; top: 0; left: 0; width: 1082px; height: 84px;
+        }
+
+        /* Main Content */
+        .element-about .content {
+            position: absolute; top: 1395px; right: 286px; width: 855px; height: 1222px; display: flex; flex-direction: column;
+        }
+        .element-about .text-wrapper, .element-about .div, .element-about .specifications {
+            align-self: flex-end; width: 436.37px; height: 45px; font-family: var(--heading-4-medium-font-family); font-weight: var(--heading-4-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-4-medium-font-size); letter-spacing: var(--heading-4-medium-letter-spacing); line-height: var(--heading-4-medium-line-height); font-style: var(--heading-4-medium-font-style); margin-right: 414.5px;
+        }
+        .element-about .web-programming-is-a, .element-about .the-class-is, .element-about .PC-laptop-with {
+            align-self: flex-end; opacity: 0.7; font-family: "Poppins-Regular", Helvetica; font-weight: 400; color: var(--dark-blue); font-size: 16px; letter-spacing: 0; line-height: 27.2px; margin-top: 12px;
+        }
+        .element-about .web-programming-is-a { margin-right: 12px; width: 837.9px; height: 324px; }
+        .element-about .group {
+            width: 842px; height: 386px; margin-top: 23px; background-image: url(./img/rectangle-1351.png); background-size: cover; background-position: 50% 50%;
+        }
+        .element-about .div { margin-top: 51px; } /* Target and Goal */
+        .element-about .the-class-is { margin-right: 12.9px; width: 836px; height: 135px; }
+        .element-about .specifications { margin-top: 24px; white-space: nowrap; }
+        .element-about .PC-laptop-with { margin-right: 373.9px; width: 475px; height: 108px; margin-top: 13px; }
+
+        /* CTA Section */
+        .element-about .liquid-glass-regular {
+            position: absolute; top: 2771px; left: 394px; width: 698px; height: 408px;
+        }
+        .element-about .shadow {
+            position: absolute; width: calc(100% + 52px); height: calc(100% + 52px); top: -35px; left: -40px; object-fit: cover;
+        }
+        .element-about .fill {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 34px; background-blend-mode: color-dodge; background: linear-gradient(0deg,rgba(245, 245, 245, 0.6) 0%,rgba(245, 245, 245, 0.6) 100%), linear-gradient(0deg, rgba(38, 38, 38, 1) 0%, rgba(38, 38, 38, 1) 100%);
+        }
+        .element-about .glass-effect {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: #00000000; border-radius: 34px; backdrop-filter: blur(10.0px) brightness(104.0%) saturate(95.0%); -webkit-backdrop-filter: blur(10.0px) brightness(104.0%) saturate(95.0%); box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(255,255,255,0.32), inset 0 -1px 6px rgba(0, 0, 0, 0.2), inset -1px 0 6px rgba(0, 0, 0, 0.16);
+        }
+        .element-about .group-7 {
+            position: absolute; width: 844px; height: 312px; top: 2817px; left: 318px;
+        }
+        .element-about .CTA-wrapper {
+            position: absolute; width: 844px; height: 172px; top: 0; left: 0; display: flex; justify-content: flex-end;
+        }
+        .element-about .headline-body {
+            width: 848px; height: 172px; margin-right: -4px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+        }
+        .element-about .don-t-miss-this {
+            margin-right: 4px; width: 844px; height: 134px; font-family: "Poppins-SemiBold", Helvetica; font-weight: 600; color: var(--dark-blue); font-size: 42px; text-align: center; letter-spacing: 0.21px; line-height: 67.2px;
+        }
+        .element-about .feel-ready-now-click {
+            margin-right: 114px; width: 624px; height: 28px; opacity: 0.7; font-family: var(--body-2-font-family); font-weight: var(--body-2-font-weight); color: var(--dark-blue); font-size: var(--body-2-font-size); text-align: center; letter-spacing: var(--body-2-letter-spacing); line-height: var(--body-2-line-height); font-style: var(--body-2-font-style);
+        }
+        .element-about .button {
+            position: absolute; width: 34.83%; height: 20.51%; top: 79.49%; left: 32.82%; text-decoration: none; display: block;
+        }
+        .element-about .button:hover .rectangle-3 {
+            background-color: #f5c960;
+        }
+        .element-about .rectangle-3 {
+            width: 99.32%; height: 100%; top: 0; background-color: var(--yellow-accent); border-radius: 5px; position: absolute; left: 0; transition: background-color 0.3s ease;
+        }
+        .element-about .text-wrapper-22 {
+            position: absolute; width: 22.11%; height: 42.19%; top: 29.69%; left: 38.44%; font-family: var(--heading-8-semibold-font-family); font-weight: var(--heading-8-semibold-font-weight); color: var(--dark-blue); font-size: var(--heading-8-semibold-font-size); text-align: center; letter-spacing: var(--heading-8-semibold-letter-spacing); line-height: var(--heading-8-semibold-line-height); white-space: nowrap; font-style: var(--heading-8-semibold-font-style);
+        }
+
+        /* Footer */
+        .element-about .footer {
+            position: absolute; top: 3329px; left: -4px; width: 1444px; height: 440px; background-color: transparent;
+        }
+        .element-about .rectangle-2 {
+            width: 100%; height: 81.82%; top: 0; background-color: var(--red-hcmut); position: absolute; left: 0;
+        }
+        .element-about .EDUFREE {
+            position: absolute; width: 20.84%; height: 7.73%; top: 15.91%; left: 4.86%; font-family: var(--heading-6-bold-font-family); font-weight: var(--heading-6-bold-font-weight); color: #ffffff; font-size: var(--heading-6-bold-font-size); letter-spacing: var(--heading-6-bold-letter-spacing); line-height: var(--heading-6-bold-line-height); white-space: nowrap; font-style: var(--heading-6-bold-font-style);
+        }
+        .element-about .lorem-ipsum-dolor {
+            position: absolute; width: 22.71%; height: 5.45%; top: 26.14%; left: 4.86%; opacity: 0.9; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); color: #ffffff; font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); font-style: var(--body1-regular-font-style);
+        }
+        .element-about .group-wrapper {
+            position: absolute; width: 100%; height: 18.18%; top: 81.82%; left: 0; background-color: #ffffff;
+        }
+        .element-about .group-4 {
+            position: relative; width: 84.72%; height: 33.75%; top: 33.75%; left: 5.14%;
+        }
+        .element-about .copyright-EDUFREE {
+            position: absolute; width: 29.59%; height: 100%; top: 0; left: 0; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style);
+        }
+        .element-about .navbar-item {
+            position: absolute; width: 30.40%; height: 88.89%; top: 11.11%; left: 70.09%;
+        }
+        .element-about .navbar-item a {
+            position: absolute; height: 100%; top: 0; font-family: var(--body1-medium-font-family); font-weight: var(--body1-medium-font-weight); color: var(--dark-blue); font-size: var(--body1-medium-font-size); letter-spacing: var(--body1-medium-letter-spacing); line-height: var(--body1-medium-line-height); white-space: nowrap; font-style: var(--body1-medium-font-style);
+        }
+        .element-about .navbar-item a:hover { text-decoration: underline; }
+        .element-about .text-wrapper-9 { width: 12.64%; left: 0; }
+        .element-about .TENTANG-KAMI { width: 32.80%; left: 22.11%; }
+        .element-about .KURSUS { width: 19.90%; left: 63.09%; }
+        .element-about .text-wrapper-10 { width: 8.60%; left: 89.24%; }
+
+        /* Footer Contact Info */
+        .element-about .info-wrapper {
+            position: absolute; width: 29.17%; height: 20.00%; top: 61.82%; left: 4.86%; background-color: var(--yellow-accent);
+        }
+        .element-about .info {
+            position: relative; width: 86.57%; height: 65.91%; top: 17.05%; left: 7.14%;
+        }
+        .element-about .text-wrapper-12, .element-about .text-wrapper-13 {
+            position: absolute; height: 46.55%; top: 0; font-family: var(--heading-8-medium-font-family); font-weight: var(--heading-8-medium-font-weight); color: var(--dark-blue); font-size: var(--heading-8-medium-font-size); letter-spacing: var(--heading-8-medium-letter-spacing); line-height: var(--heading-8-medium-line-height); white-space: nowrap; font-style: var(--heading-8-medium-font-style);
+        }
+        .element-about .text-wrapper-12 { width: 13.99%; left: 0; }
+        .element-about .text-wrapper-13 { width: 26.61%; left: 57.76%; }
+        
+        .element-about .text-wrapper-11, .element-about .element {
+            position: absolute; height: 41.38%; top: 58.62%; opacity: 0.8; font-family: var(--body1-regular-font-family); font-weight: var(--body1-regular-font-weight); color: var(--dark-blue); font-size: var(--body1-regular-font-size); letter-spacing: var(--body1-regular-letter-spacing); line-height: var(--body1-regular-line-height); white-space: nowrap; font-style: var(--body1-regular-font-style); text-decoration: none;
+        }
+        .element-about .text-wrapper-11:hover, .element-about .element:hover { text-decoration: underline; }
+        .element-about .text-wrapper-11 { width: 49.65%; left: 0; }
+        .element-about .element { top: 56.90%; left: 57.76%; width: 40.05%; }
+
+        /* Footer Sub-Navigation */
+        .element-about .group-5 {
+            position: absolute; width: 597px; height: 144px; top: 3416px; left: 695px;
+        }
+        .element-about .support, .element-about .support-2, .element-about .support-3 { position: absolute; top: 0; height: 100%; }
+        .element-about .support { width: 23.12%; left: 0; }
+        .element-about .support-3 { width: 20.60%; left: 38.19%; height: 75.69%; }
+        .element-about .support-2 { width: 21.94%; left: 79.40%; }
+
+        .element-about .sosial-media, .element-about .text-wrapper-17, .element-about .DUKUNGAN {
+            position: absolute; top: 0; height: 20.83%; font-family: var(--heading-7-medium-font-family); font-weight: var(--heading-7-medium-font-weight); color: #ffffff; font-size: var(--heading-7-medium-font-size); letter-spacing: var(--heading-7-medium-letter-spacing); line-height: var(--heading-7-medium-line-height); white-space: nowrap; font-style: var(--heading-7-medium-font-style); left: 0;
+        }
+        .element-about .sosial-media { width: 94.20%; }
+        .element-about .text-wrapper-17 { width: 72.36%; }
+        .element-about .DUKUNGAN { width: 68.70%; }
+
+        .element-about .support a {
+            position: absolute; left: 0; font-family: var(--heading-8-regular-font-family); font-weight: var(--heading-8-regular-font-weight); color: #ffffff; font-size: var(--heading-8-regular-font-size); letter-spacing: var(--heading-8-regular-letter-spacing); line-height: var(--heading-8-regular-line-height); white-space: nowrap; font-style: var(--heading-8-regular-font-style); text-decoration: none;
+        }
+        .element-about .support a:hover { text-decoration: underline; }
+        .element-about .text-wrapper-14 { width: 68.84%; top: 35.42%; height: 18.75%; }
+        .element-about .text-wrapper-15 { width: 44.20%; top: 56.94%; height: 18.75%; }
+        .element-about .text-wrapper-16 { width: 52.90%; top: 81.25%; height: 18.75%; }
+        
+        .element-about .support-3 a {
+            position: absolute; left: 0; font-family: var(--heading-8-regular-font-family); font-weight: var(--heading-8-regular-font-weight); color: #ffffff; font-size: var(--heading-8-regular-font-size); letter-spacing: var(--heading-8-regular-letter-spacing); line-height: var(--heading-8-regular-line-height); white-space: nowrap; font-style: var(--heading-8-regular-font-style); text-decoration: none;
+        }
+        .element-about .support-3 a:hover { text-decoration: underline; }
+        .element-about .merdeka-belajar { width: 95.12%; top: 46.79%; height: 24.77%; }
+        .element-about .finterpreneur { width: 89.43%; top: 75.23%; height: 24.77%; }
+
+        .element-about .support-2 a {
+            position: absolute; left: 0; font-family: var(--heading-8-regular-font-family); font-weight: var(--heading-8-regular-font-weight); color: #ffffff; font-size: var(--heading-8-regular-font-size); letter-spacing: var(--heading-8-regular-letter-spacing); line-height: var(--heading-8-regular-line-height); white-space: nowrap; font-style: var(--heading-8-regular-font-style); text-decoration: none;
+        }
+        .element-about .support-2 a:hover { text-decoration: underline; }
+        .element-about .tentang-kami { width: 61.83%; top: 35.42%; height: 18.75%; }
+        .element-about .ketentuan { width: 61.83%; top: 56.94%; height: 18.75%; }
+        .element-about .kebijakan-privasi { width: 93.89%; top: 81.25%; height: 18.75%; }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const avatarButton = document.querySelector('.generic-avatar');
+            const userDropbox = document.getElementById('user-dropbox');
+
+            if (avatarButton && userDropbox) {
+                avatarButton.addEventListener('click', () => {
+                    const isExpanded = avatarButton.getAttribute('aria-expanded') === 'true' || false;
+                    avatarButton.setAttribute('aria-expanded', !isExpanded);
+                    userDropbox.setAttribute('aria-hidden', isExpanded);
+                });
+                
+                // Close dropdown if clicking outside
+                document.addEventListener('click', (event) => {
+                    if (!avatarButton.contains(event.target) && !userDropbox.contains(event.target)) {
+                        avatarButton.setAttribute('aria-expanded', 'false');
+                        userDropbox.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="element-about">
+        <header class="navigasi-login">
+            <div class="text-wrapper-21">[LOGO]</div>
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="#home" class="text-wrapper-18">HOME</a>
+                <a href="#tutor" class="text-wrapper-19">TUTOR</a>
+                <a href="#courses" class="text-wrapper-20">COURSES</a>
+                <a href="#blog" class="BLOG">BLOG</a>
+                <button class="frame-wrapper" aria-label="Search">
+                    <span class="frame"><img class="vector" src="img/vector.svg" alt="Search icon" /></span>
+                </button>
+            </nav>
+            <div class="group-6">
+                <img class="img" src="img/group-2597.png" alt="User info placeholder" /> 
+                <button class="icon" aria-label="Notifications">
+                    <img class="vector-2" src="img/image.svg" alt="Notification bell" />
+                </button>
+                <button class="icon" aria-label="Messages">
+                    <img class="vector-2" src="img/vector-2.svg" alt="Message icon" />
+                </button>
+            </div>
+            
+            <button class="generic-avatar" aria-label="User profile menu" aria-expanded="false" aria-controls="user-dropbox">
+                <img src="img/style-avatar.svg" alt="User avatar" />
+            </button>
+        </header>
+
+        <aside class="user-dropbox" id="user-dropbox" role="menu" aria-hidden="true">
+            <a href="#profile" class="text-wrapper-23" role="menuitem">View Profile</a>
+            <div class="frame-2"></div>
+            <a href="#logout" class="text-wrapper-24" role="menuitem">Log out</a>
+        </aside>
+
+        <div class="rectangle"></div>
+
+        <nav class="home-courses-web" aria-label="Breadcrumb">
+            <a href="#home">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="#courses">Courses</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<span>Web Programming</span>
+        </nav>
+
+        <section class="blog-header">
+            <h1 class="text-wrapper-2">WEB PROGAMMING</h1>
+        </section>
+
+        <p class="p">Get to know the basics of website build !!</p>
+
+        <div class="group-2" role="img" aria-label="Course cover image"></div>
+
+        <nav class="keywords" aria-label="Course sections">
+            <div class="group-3">
+                <a href="#description" class="text-wrapper-3">Description</a>
+                <a href="#introduction" class="text-wrapper-4">Introduction</a>
+                <a href="#syllabus" class="text-wrapper-5">Syllabus</a>
+                <a href="#content" class="text-wrapper-6">Content</a>
+                <a href="#review" class="text-wrapper-7">Review</a>
+                <a href="#faq" class="text-wrapper-8">FAQ</a>
+            </div>
+            <img class="line" src="img/line-48.svg" alt="Separator line" />
+        </nav>
+
+        <main class="content">
+            <section id="description">
+                <h2 class="text-wrapper">Every first start,</h2>
+                <p class="web-programming-is-a">Web programming is a term closely related to websites and the internet. Why is that? Because web programming is one of the processes of creating websites for internet purposes, commonly referred to as the **WWW** or **World Wide Web**. The term WWW is widely known because it is the most popular internet service today. <br /><br />In this course, you will learn how to create websites to industry standards. Here, you will be taught **HTML**, **CSS**, and **JavaScript**, which are the basic foundations of website creation. <br /><br />The benefits of learning website programming are: <br />* Ability to run application and software businesses <br />* Ability to build your own website <br />* Supporting your career</p>
+                <div class="group" role="img" aria-label="Course illustration"></div>
+            </section>
+            
+            <section id="target">
+                <h2 class="div">Target and Goal</h2>
+                <p class="the-class-is">The class is intended for students with a high level of curiosity in the field of website programming.<br />This class provides a certificate when students can complete each course they study. <br />It is expected that students can complete all the assignments given at the end of the course. <br />This class is designed for beginners so there are no prerequisites in understanding programming beforehand.</p>
+            </section>
+            
+            <section id="specifications">
+                <h2 class="specifications">Specifications &amp; Software</h2>
+                <p class="PC-laptop-with">**PC/Laptop** with minimum **4 GB RAM** and **128 GB free disk** <br />**Browser** <br />**Text Editor** (VsCode,...)<br />**Internet access**</p>
+            </section>
+        </main>
+
+        <section class="group-7" aria-label="Call to action for course registration">
+            <div class="liquid-glass-regular" aria-hidden="true">
+                <img class="shadow" src="img/shadow.svg" alt="" />
+                <div class="fill"></div>
+                <div class="glass-effect"></div>
+            </div>
+            <div class="CTA-wrapper">
+                <div class="headline-body">
+                    <h2 class="don-t-miss-this">Don't Miss This Opportunity <br />Let's Create Something!</h2>
+                    <p class="feel-ready-now-click">Feel ready now?&nbsp;&nbsp;Click the button below to dig deeper !!</p>
+                </div>
+            </div>
+            <a href="#more" class="button"><span class="rectangle-3"></span><span class="text-wrapper-22">M O R E</span></a>
+        </section>
+        
+        <footer class="footer">
+            <div class="rectangle-2"></div>
+            <div class="EDUFREE">[HCMUT TUTOR SYSTEM]</div>
+            <p class="lorem-ipsum-dolor">STRIVE FOR GREATNESS</p>
+            <div class="group-wrapper">
+                <div class="group-4">
+                    <p class="copyright-EDUFREE">© Copyright HCMUT TUTORSYSTEM 2025</p>
+                    <nav class="navbar-item" aria-label="Footer navigation">
+                        <a href="#home" class="text-wrapper-9">HOME</a>
+                        <a href="#about" class="TENTANG-KAMI">ABOUT CENTER</a>
+                        <a href="#courses" class="KURSUS">COURSES</a>
+                        <a href="#faq" class="text-wrapper-10">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+            <address class="info-wrapper">
+                <div class="info">
+                    <div class="text-wrapper-12">Email</div>
+                    <a href="mailto:contact@website.com" class="text-wrapper-11">contact@website.com</a>
+                    <div class="text-wrapper-13">Telephone</div>
+                    <a href="tel:+84686868686868" class="element">+84 6868 6868 68</a>
+                </div>
+            </address>
+            <div class="group-5">
+                <nav class="support" aria-label="Social media">
+                    <h3 class="sosial-media">Social Media</h3>
+                    <a href="#instagram" class="text-wrapper-14">Instagram</a>
+                    <a href="#twitter" class="text-wrapper-15">Twitter</a>
+                    <a href="#linkedin" class="text-wrapper-16">LinkedIn</a>
+                </nav>
+                <nav class="support-3" aria-label="Programs">
+                    <h3 class="text-wrapper-17">Program</h3>
+                    <a href="#free-learn" class="merdeka-belajar">Free to Learn</a>
+                    <a href="#free-take" class="finterpreneur">Free to Take</a>
+                </nav>
+                <nav class="support-2" aria-label="Support">
+                    <h3 class="DUKUNGAN">SUPPORT</h3>
+                    <a href="#about" class="tentang-kami">About Us</a>
+                    <a href="#provision" class="ketentuan">Provision</a>
+                    <a href="#privacy" class="kebijakan-privasi">Privacy Policy</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

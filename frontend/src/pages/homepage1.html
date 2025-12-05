@@ -1,0 +1,3049 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>HCMUT TUTOR SYSTEM</title>
+    <style>
+      /* --- globals.css content --- */
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+      /* a blue color as a generic focus style */
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* --- style.css content --- */
+      .element-homepage {
+        background-color: #ffffff;
+        width: 100%;
+        min-width: 1440px;
+        height: 5850px;
+        position: relative;
+      }
+
+      .element-homepage .header {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 1440px;
+        height: 579px;
+        background-color: #d84040;
+      }
+
+      .element-homepage .text-left {
+        position: absolute;
+        top: 112px;
+        left: 70px;
+        width: 668px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .element-homepage .text-wrapper {
+        width: 664px;
+        height: 102px;
+        font-family: "Baloo Paaji-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 64px;
+        letter-spacing: 0.32px;
+        line-height: 102.4px;
+        white-space: nowrap;
+      }
+
+      .element-homepage .div {
+        width: 255px;
+        height: 36px;
+        margin-top: 64px;
+        font-family: "Poppins-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 36px;
+        white-space: nowrap;
+      }
+
+      .element-homepage .button {
+        all: unset;
+        box-sizing: border-box;
+        width: 187px;
+        height: 54px;
+        position: relative;
+        margin-top: 74px;
+      }
+
+      .element-homepage .rectangle {
+        top: 0;
+        width: 185px;
+        height: 54px;
+        background-color: #fcd980;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .text-wrapper-2 {
+        position: absolute;
+        top: 15px;
+        left: 68px;
+        font-family: "Poppins-Medium", Helvetica;
+        font-weight: 500;
+        color: #282938;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        line-height: 24px;
+        white-space: nowrap;
+      }
+
+      .element-homepage .group {
+        position: absolute;
+        top: 407px;
+        left: 348px;
+        width: 105px;
+        height: 24px;
+        display: flex;
+        gap: 17px;
+      }
+
+      .element-homepage .text-wrapper-3 {
+        width: 66px;
+        height: 24px;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .frame {
+        margin-top: 5px;
+        width: 20px;
+        height: 16px;
+        position: relative;
+      }
+
+      .element-homepage .vector {
+        position: absolute;
+        width: 75.00%;
+        height: 58.33%;
+        top: 16.15%;
+        left: 8.75%;
+      }
+
+      .element-homepage .benefits {
+        position: absolute;
+        top: 1178px;
+        right: 77px;
+        width: 1302px;
+        height: 850px;
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+      }
+
+      .element-homepage .what-will-you {
+        align-self: flex-end;
+        margin-right: 323px;
+        width: 640px;
+        height: 114px;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: var(--dark-blue);
+        font-size: 38px;
+        text-align: center;
+        letter-spacing: 0.30px;
+        line-height: 57px;
+      }
+
+      .element-homepage .group-2 {
+        width: 1300px;
+        height: 674px;
+        position: relative;
+      }
+
+      .element-homepage .card {
+        position: absolute;
+        top: 0;
+        left: 895px;
+        width: 405px;
+        height: 316px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: var(--grey);
+      }
+
+      .element-homepage .group-3 {
+        margin-left: 48px;
+        width: 42px;
+        height: 40px;
+        position: relative;
+        margin-top: 48px;
+      }
+
+      .element-homepage .mask-group {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+      }
+
+      .element-homepage .text-wrapper-4 {
+        position: absolute;
+        top: 7px;
+        left: 17px;
+        width: 6px;
+        font-family: var(--heading-7-semibold-font-family);
+        font-weight: var(--heading-7-semibold-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-semibold-font-size);
+        letter-spacing: var(--heading-7-semibold-letter-spacing);
+        line-height: var(--heading-7-semibold-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-7-semibold-font-style);
+      }
+
+      .element-homepage .point-text {
+        align-self: flex-end;
+        margin-right: 28.0px;
+        width: 329px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+      }
+
+      .element-homepage .text-wrapper-5 {
+        margin-right: 13.7px;
+        width: 315.3px;
+        height: 36px;
+        font-family: var(--heading-6-font-family);
+        font-weight: var(--heading-6-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-font-size);
+        letter-spacing: var(--heading-6-letter-spacing);
+        line-height: var(--heading-6-line-height);
+        font-style: var(--heading-6-font-style);
+      }
+
+      .element-homepage .text-wrapper-6 {
+        margin-right: 4px;
+        width: 324.65px;
+        height: 112px;
+        opacity: 0.7;
+        font-family: var(--body-1-font-family);
+        font-weight: var(--body-1-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body-1-font-size);
+        letter-spacing: var(--body-1-letter-spacing);
+        line-height: var(--body-1-line-height);
+        font-style: var(--body-1-font-style);
+      }
+
+      .element-homepage .group-wrapper {
+        top: 358px;
+        left: 895px;
+        width: 405px;
+        display: flex;
+        background-color: var(--grey);
+        position: absolute;
+        height: 316px;
+      }
+
+      .element-homepage .card-2 {
+        top: 0;
+        left: 447px;
+        width: 410px;
+        position: absolute;
+        height: 316px;
+      }
+
+      .element-homepage .rectangle-2 {
+        top: 0;
+        width: 406px;
+        height: 316px;
+        background-color: var(--grey);
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .text-wrapper-7 {
+        position: absolute;
+        top: 108px;
+        right: 162px;
+        width: 200px;
+        font-family: var(--heading-6-font-family);
+        font-weight: var(--heading-6-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-font-size);
+        letter-spacing: var(--heading-6-letter-spacing);
+        line-height: var(--heading-6-line-height);
+        font-style: var(--heading-6-font-style);
+      }
+
+      .element-homepage .text-wrapper-8 {
+        position: absolute;
+        top: 156px;
+        right: 47px;
+        width: 315px;
+        opacity: 0.7;
+        font-family: var(--body-1-font-family);
+        font-weight: var(--body-1-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body-1-font-size);
+        letter-spacing: var(--body-1-letter-spacing);
+        line-height: var(--body-1-line-height);
+        font-style: var(--body-1-font-style);
+      }
+
+      .element-homepage .group-4 {
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        width: 42px;
+        height: 40px;
+      }
+
+      .element-homepage .div-wrapper {
+        top: 358px;
+        left: 447px;
+        width: 406px;
+        display: flex;
+        background-color: var(--grey);
+        position: absolute;
+        height: 316px;
+      }
+
+      .element-homepage .card-3 {
+        top: 0;
+        left: 0;
+        width: 415px;
+        position: absolute;
+        height: 316px;
+      }
+
+      .element-homepage .rectangle-3 {
+        top: 0;
+        width: 405px;
+        height: 316px;
+        position: absolute;
+        left: 0;
+        background-color: var(--grey);
+      }
+
+      .element-homepage .text-wrapper-9 {
+        position: absolute;
+        top: 108px;
+        right: 37px;
+        width: 336px;
+        font-family: var(--heading-6-font-family);
+        font-weight: var(--heading-6-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-font-size);
+        letter-spacing: var(--heading-6-letter-spacing);
+        line-height: var(--heading-6-line-height);
+        font-style: var(--heading-6-font-style);
+      }
+
+      .element-homepage .text-wrapper-10 {
+        position: absolute;
+        top: 156px;
+        right: 43px;
+        width: 324px;
+        opacity: 0.7;
+        font-family: var(--body-1-font-family);
+        font-weight: var(--body-1-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body-1-font-size);
+        letter-spacing: var(--body-1-letter-spacing);
+        line-height: var(--body-1-line-height);
+        font-style: var(--body-1-font-style);
+      }
+
+      .element-homepage .text-wrapper-11 {
+        top: 8px;
+        left: 19px;
+        width: 6px;
+        font-family: var(--heading-7-bold-font-family);
+        font-weight: var(--heading-7-bold-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-bold-font-size);
+        letter-spacing: var(--heading-7-bold-letter-spacing);
+        line-height: var(--heading-7-bold-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-7-bold-font-style);
+      }
+
+      .element-homepage .card-4 {
+        top: 358px;
+        left: 0;
+        width: 405px;
+        display: flex;
+        background-color: var(--grey);
+        position: absolute;
+        height: 316px;
+      }
+
+      .element-homepage .text-wrapper-12 {
+        top: 8px;
+        left: 16px;
+        width: 6px;
+        font-family: var(--heading-7-semibold-font-family);
+        font-weight: var(--heading-7-semibold-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-semibold-font-size);
+        letter-spacing: var(--heading-7-semibold-letter-spacing);
+        line-height: var(--heading-7-semibold-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-7-semibold-font-style);
+      }
+
+      .element-homepage .rectangle-4 {
+        top: 669px;
+        width: 1440px;
+        height: 452px;
+        position: absolute;
+        left: 0;
+        background-color: var(--grey);
+      }
+
+      .element-homepage .courses {
+        position: absolute;
+        top: 2247px;
+        left: 61px;
+        width: 1300px;
+        height: 613px;
+      }
+
+      .element-homepage .group-5 {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        width: 1302px;
+        height: 133px;
+      }
+
+      .element-homepage .highlighted-COURSES {
+        position: absolute;
+        top: 0;
+        right: 659px;
+        width: 640px;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: var(--dark-blue);
+        font-size: 38px;
+        letter-spacing: 0.30px;
+        line-height: 57px;
+      }
+
+      .element-homepage .button-2 {
+        all: unset;
+        box-sizing: border-box;
+        position: absolute;
+        top: 30px;
+        left: 1115px;
+        width: 187px;
+        height: 54px;
+      }
+
+      .element-homepage .text-wrapper-13 {
+        position: absolute;
+        top: 15px;
+        left: 41px;
+        font-family: var(--heading-8-bold-font-family);
+        font-weight: var(--heading-8-bold-font-weight);
+        color: #282938;
+        font-size: var(--heading-8-bold-font-size);
+        letter-spacing: var(--heading-8-bold-letter-spacing);
+        line-height: var(--heading-8-bold-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-bold-font-style);
+      }
+
+      .element-homepage .text-wrapper-14 {
+        position: absolute;
+        top: 15px;
+        left: 76px;
+        font-family: "Poppins-Medium", Helvetica;
+        font-weight: 500;
+        color: #282938;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        line-height: 24px;
+        white-space: nowrap;
+      }
+
+      .element-homepage .group-6 {
+        position: absolute;
+        top: 44px;
+        left: 942px;
+        width: 125px;
+        height: 27px;
+        display: flex;
+        gap: 6px;
+      }
+
+      .element-homepage .text-wrapper-15 {
+        width: 93px;
+        height: 27px;
+        font-family: var(--heading-8-medium-font-family);
+        font-weight: var(--heading-8-medium-font-weight);
+        color: #282938;
+        font-size: var(--heading-8-medium-font-size);
+        letter-spacing: var(--heading-8-medium-letter-spacing);
+        line-height: var(--heading-8-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-medium-font-style);
+      }
+
+      .element-homepage .vector-wrapper {
+        width: 24px;
+        height: 24px;
+        position: relative;
+      }
+
+      .element-homepage .img {
+        position: absolute;
+        width: 58.33%;
+        height: 29.17%;
+        top: 33.33%;
+        left: 16.67%;
+      }
+
+      .element-homepage .line {
+        position: absolute;
+        top: 131px;
+        left: 0;
+        width: 1300px;
+        height: 2px;
+      }
+
+      .element-homepage .group-7 {
+        position: absolute;
+        width: 1300px;
+        height: 418px;
+        top: 195px;
+        left: 0;
+        display: flex;
+        gap: 71px;
+      }
+
+      .element-homepage .group-8 {
+        width: 386px;
+        height: 418px;
+        position: relative;
+        background-color: #ffffff;
+      }
+
+      .element-homepage .img-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 386px;
+        height: 236px;
+      }
+
+      .element-homepage .group-9 {
+        position: absolute;
+        top: 9px;
+        right: 1px;
+        width: 369px;
+        height: 385px;
+      }
+
+      .element-homepage .project-title {
+        position: absolute;
+        top: 251px;
+        right: 15px;
+        width: 354px;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .project-title-2 {
+        position: absolute;
+        top: 295px;
+        right: 14px;
+        width: 350px;
+        height: 36px;
+      }
+
+      .element-homepage .group-10 {
+        position: absolute;
+        width: 363px;
+        height: 385px;
+        top: 0;
+        left: 2px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .element-homepage .group-11 {
+        margin-top: 361.1px;
+        width: 84px;
+        margin-right: 22px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0.9;
+      }
+
+      .element-homepage .img-wrapper {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        opacity: 0.8;
+      }
+
+      .element-homepage .vector-2 {
+        position: absolute;
+        width: 75.00%;
+        height: 75.00%;
+        top: 9.38%;
+        left: 9.38%;
+      }
+
+      .element-homepage .project-title-3 {
+        width: 50px;
+        height: 24px;
+        margin-right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-12 {
+        width: 98px;
+        height: 385.14px;
+        position: relative;
+        margin-right: 31px;
+      }
+
+      .element-homepage .project-title-4 {
+        position: absolute;
+        top: 361px;
+        right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .frame-2 {
+        position: absolute;
+        width: 24.49%;
+        height: 5.43%;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+      }
+
+      .element-homepage .vector-3 {
+        position: absolute;
+        width: 21.66%;
+        height: 26.11%;
+        top: 33.36%;
+        left: 38.54%;
+      }
+
+      .element-homepage .vector-4 {
+        position: absolute;
+        width: 75.00%;
+        height: 75.00%;
+        top: 8.91%;
+        left: 9.38%;
+      }
+
+      .element-homepage .group-13 {
+        margin-top: 361.1px;
+        width: 130px;
+        margin-right: -2px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .element-homepage .frame-3 {
+        margin-top: 2px;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        opacity: 0.8;
+      }
+
+      .element-homepage .vector-5 {
+        position: absolute;
+        width: 75.00%;
+        height: 75.00%;
+        top: 8.75%;
+        left: 8.75%;
+      }
+
+      .element-homepage .project-title-5 {
+        width: 100px;
+        height: 24px;
+        margin-right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-14 {
+        position: absolute;
+        top: 223px;
+        left: 314px;
+        width: 65px;
+        height: 25px;
+      }
+
+      .element-homepage .rectangle-5 {
+        top: 0;
+        width: 63px;
+        height: 25px;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .frame-4 {
+        position: absolute;
+        top: 4px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .element-homepage .vector-6 {
+        position: absolute;
+        width: 74.34%;
+        height: 71.20%;
+        top: 11.18%;
+        left: 12.83%;
+      }
+
+      .element-homepage .text-wrapper-16 {
+        position: absolute;
+        top: 4px;
+        left: 33px;
+        width: 19px;
+        font-family: var(--body3-medium-font-family);
+        font-weight: var(--body3-medium-font-weight);
+        color: #ffffff;
+        font-size: var(--body3-medium-font-size);
+        text-align: justify;
+        letter-spacing: var(--body3-medium-letter-spacing);
+        line-height: var(--body3-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--body3-medium-font-style);
+      }
+
+      .element-homepage .group-15 {
+        position: absolute;
+        top: 260px;
+        right: 12px;
+        width: 358px;
+        height: 86px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+      }
+
+      .element-homepage .project-title-6 {
+        margin-right: 4px;
+        width: 354px;
+        height: 34px;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .p {
+        margin-right: 4px;
+        width: 352px;
+        height: 48px;
+        opacity: 0.6;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: #282938;
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .video {
+        position: absolute;
+        top: 296px;
+        left: 185px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .element-homepage .group-16 {
+        position: absolute;
+        width: 343px;
+        height: 385px;
+        top: 2451px;
+        left: 536px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .element-homepage .group-17 {
+        margin-top: 361.1px;
+        width: 83px;
+        margin-right: 23px;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0.9;
+      }
+
+      .element-homepage .project-title-7 {
+        width: 49px;
+        height: 24px;
+        margin-right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-18 {
+        width: 111px;
+        margin-right: 18px;
+        height: 385.14px;
+        position: relative;
+      }
+
+      .element-homepage .frame-5 {
+        position: absolute;
+        width: 21.62%;
+        height: 5.43%;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+      }
+
+      .element-homepage .group-19 {
+        width: 110px;
+        margin-top: 361.1px;
+        margin-right: -2px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .element-homepage .project-title-8 {
+        width: 80px;
+        height: 24px;
+        margin-right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-20 {
+        position: absolute;
+        width: 365px;
+        height: 385px;
+        top: 2451px;
+        left: 987px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .element-homepage .group-21 {
+        width: 110px;
+        margin-right: 19px;
+        height: 385.14px;
+        position: relative;
+      }
+
+      .element-homepage .frame-6 {
+        position: absolute;
+        width: 21.82%;
+        height: 5.43%;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+      }
+
+      .element-homepage .group-22 {
+        width: 132px;
+        margin-top: 361.1px;
+        margin-right: -2px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .element-homepage .project-title-9 {
+        width: 102px;
+        height: 24px;
+        margin-right: 2px;
+        opacity: 0.9;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        text-align: justify;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .testimonies {
+        position: absolute;
+        top: 2881px;
+        left: 0;
+        width: 1440px;
+        display: flex;
+        flex-direction: column;
+        padding: 77px 73px;
+        align-items: flex-start;
+        min-height: 367px;
+        gap: 10px;
+        background-image: url(./img/rectangle-1345.svg);
+        background-size: 100% 100%;
+      }
+
+      .element-homepage .group-23 {
+        width: 1293px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 100px;
+      }
+
+      .element-homepage .heading {
+        width: 350px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 30px;
+      }
+
+      .element-homepage .text-wrapper-17 {
+        margin-right: 4px;
+        width: 346px;
+        height: 96px;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: var(--dark-blue);
+        font-size: 28px;
+        letter-spacing: 0.14px;
+        line-height: 47.6px;
+      }
+
+      .element-homepage .over-reviews {
+        margin-right: 23px;
+        width: 327px;
+        height: 24px;
+        opacity: 0.7;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .content {
+        margin-top: 6px;
+        width: 845px;
+        margin-right: -2px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .element-homepage .text-wrapper-18 {
+        width: 843px;
+        height: 108px;
+        margin-right: 2px;
+        font-family: var(--heading-5-medium-font-family);
+        font-weight: var(--heading-5-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-5-medium-font-size);
+        text-align: justify;
+        letter-spacing: var(--heading-5-medium-letter-spacing);
+        line-height: var(--heading-5-medium-line-height);
+        font-style: var(--heading-5-medium-font-style);
+      }
+
+      .element-homepage .group-24 {
+        width: 755px;
+        align-self: flex-end;
+        margin-right: 12px;
+        display: flex;
+        gap: 440px;
+      }
+
+      .element-homepage .profile {
+        width: 183px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .element-homepage .group-25 {
+        width: 187px;
+        height: 45px;
+        margin-right: -4px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1px;
+      }
+
+      .element-homepage .name {
+        margin-right: 4px;
+        width: 183px;
+        height: 27px;
+        font-family: var(--heading-8-medium-font-family);
+        font-weight: var(--heading-8-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-8-medium-font-size);
+        letter-spacing: var(--heading-8-medium-letter-spacing);
+        line-height: var(--heading-8-medium-line-height);
+        font-style: var(--heading-8-medium-font-style);
+      }
+
+      .element-homepage .designation {
+        margin-right: 4px;
+        width: 183px;
+        height: 17px;
+        font-family: var(--caption1-medium-font-family);
+        font-weight: var(--caption1-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--caption1-medium-font-size);
+        letter-spacing: var(--caption1-medium-letter-spacing);
+        line-height: var(--caption1-medium-line-height);
+        font-style: var(--caption1-medium-font-style);
+      }
+
+      .element-homepage .group-26 {
+        margin-top: 14px;
+        width: 132px;
+        display: flex;
+        gap: 13px;
+      }
+
+      .element-homepage .ellipse {
+        background-color: #2405f266;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+      }
+
+      .element-homepage .ellipse-2 {
+        background-color: #2405f2;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+      }
+
+      .element-homepage .navigasi {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1440px;
+        height: 90px;
+        background-color: #d84040;
+      }
+
+      .element-homepage .button-3 {
+        position: absolute;
+        width: 8.89%;
+        height: 55.56%;
+        top: 22.22%;
+        left: 86.39%;
+      }
+
+      .element-homepage .rectangle-6 {
+        width: 98.44%;
+        border: 1px solid;
+        border-color: #ffffff;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+      }
+
+      .element-homepage .text-wrapper-19 {
+        position: absolute;
+        width: 33.59%;
+        height: 48.00%;
+        top: 26.00%;
+        left: 32.81%;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .navbar {
+        position: absolute;
+        width: 32.50%;
+        height: 26.67%;
+        top: 36.67%;
+        left: 49.44%;
+      }
+
+      .element-homepage .text-wrapper-20 {
+        width: 10.04%;
+        left: 0;
+        font-family: var(--body1-medium-font-family);
+        font-weight: var(--body1-medium-font-weight);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        color: #ffffff;
+        font-size: var(--body1-medium-font-size);
+        letter-spacing: var(--body1-medium-letter-spacing);
+        line-height: var(--body1-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-medium-font-style);
+      }
+
+      .element-homepage .TENTANG-KAMI {
+        position: absolute;
+        width: 10.90%;
+        height: 100%;
+        top: 0;
+        left: 24.15%;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        text-align: center;
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .KURSUS {
+        width: 15.60%;
+        left: 49.15%;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .FAQ {
+        width: 14.53%;
+        left: 69.44%;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-27 {
+        position: absolute;
+        width: 14.96%;
+        height: 100%;
+        top: 0;
+        left: 83.76%;
+      }
+
+      .element-homepage .BLOG {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .frame-7 {
+        position: absolute;
+        width: 28.57%;
+        height: 83.33%;
+        top: 8.33%;
+        left: 68.57%;
+      }
+
+      .element-homepage .vector-7 {
+        position: absolute;
+        width: 66.67%;
+        height: 66.67%;
+        top: 12.92%;
+        left: 12.92%;
+      }
+
+      .element-homepage .EDUFREE {
+        position: absolute;
+        width: 6.46%;
+        height: 37.78%;
+        top: 31.11%;
+        left: 4.86%;
+        font-family: var(--heading-6-bold-font-family);
+        font-weight: var(--heading-6-bold-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-6-bold-font-size);
+        letter-spacing: var(--heading-6-bold-letter-spacing);
+        line-height: var(--heading-6-bold-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-bold-font-style);
+      }
+
+      .element-homepage .FAQ-2 {
+        position: absolute;
+        top: 3522px;
+        left: 61px;
+        width: 1286px;
+        height: 712px;
+      }
+
+      .element-homepage .question {
+        position: absolute;
+        width: 66.02%;
+        height: 101.89%;
+        top: 0;
+        left: 33.98%;
+      }
+
+      .element-homepage .qn {
+        position: absolute;
+        width: 96.33%;
+        height: 9.37%;
+        top: 90.63%;
+        left: 3.42%;
+      }
+
+      .element-homepage .img-3 {
+        position: absolute;
+        width: 0;
+        height: 31.31%;
+        top: 19.57%;
+        left: 97.55%;
+      }
+
+      .element-homepage .apakah-ada {
+        position: absolute;
+        width: 74.34%;
+        height: 100.00%;
+        top: 0;
+        left: 9.90%;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-21 {
+        width: 3.79%;
+        height: 50.00%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--royal-blue);
+        font-size: var(--heading-6-medium-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .line-2 {
+        top: 84.48%;
+        position: absolute;
+        width: 99.28%;
+        height: 0;
+        left: 0;
+      }
+
+      .element-homepage .qn-2 {
+        position: absolute;
+        width: 97.29%;
+        height: 6.34%;
+        top: 72.28%;
+        left: 3.18%;
+      }
+
+      .element-homepage .sampai-kapan-kursus {
+        position: absolute;
+        width: 58.83%;
+        height: 73.93%;
+        top: 0;
+        left: 10.29%;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-22 {
+        width: 3.87%;
+        height: 73.93%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--royal-blue);
+        font-size: var(--heading-6-medium-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .frame-8 {
+        position: absolute;
+        width: 3.13%;
+        height: 56.31%;
+        top: 26.83%;
+        left: 96.07%;
+        transform: rotate(-53.08deg);
+        opacity: 0.6;
+      }
+
+      .element-homepage .vector-8 {
+        position: absolute;
+        width: 50.00%;
+        height: 50.00%;
+        top: 5.66%;
+        left: 16.69%;
+        transform: rotate(53.08deg);
+      }
+
+      .element-homepage .line-3 {
+        top: 66.13%;
+        position: absolute;
+        width: 99.28%;
+        height: 0;
+        left: 0;
+      }
+
+      .element-homepage .qn-3 {
+        position: absolute;
+        width: 97.29%;
+        height: 6.34%;
+        top: 53.94%;
+        left: 3.06%;
+      }
+
+      .element-homepage .apakah-kursus-ini {
+        position: absolute;
+        width: 42.98%;
+        height: 73.93%;
+        top: 0;
+        left: 10.41%;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-23 {
+        width: 3.63%;
+        height: 73.93%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--royal-blue);
+        font-size: var(--heading-6-medium-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .line-4 {
+        top: 47.79%;
+        position: absolute;
+        width: 99.28%;
+        height: 0;
+        left: 0;
+      }
+
+      .element-homepage .qn-4 {
+        position: absolute;
+        width: 97.29%;
+        height: 5.97%;
+        top: 35.59%;
+        left: 3.06%;
+      }
+
+      .element-homepage .untuk-siapa-kursus {
+        position: absolute;
+        width: 60.77%;
+        height: 78.47%;
+        top: 0;
+        left: 10.17%;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-24 {
+        width: 3.63%;
+        height: 78.47%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--royal-blue);
+        font-size: var(--heading-6-medium-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .frame-9 {
+        position: absolute;
+        width: 3.13%;
+        height: 59.77%;
+        top: 22.33%;
+        left: 96.07%;
+        transform: rotate(-53.08deg);
+        opacity: 0.6;
+      }
+
+      .element-homepage .line-5 {
+        top: 29.44%;
+        position: absolute;
+        width: 99.28%;
+        height: 0;
+        left: 0;
+      }
+
+      .element-homepage .qn-expand {
+        position: absolute;
+        width: 97.04%;
+        height: 20.91%;
+        top: 0;
+        left: 3.06%;
+      }
+
+      .element-homepage .lorem-ipsum-dolor {
+        position: absolute;
+        width: 75.73%;
+        height: 54.39%;
+        top: 45.61%;
+        left: 10.19%;
+        opacity: 0.7;
+        font-family: var(--label-01-font-family);
+        font-weight: var(--label-01-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--label-01-font-size);
+        letter-spacing: var(--label-01-letter-spacing);
+        line-height: var(--label-01-line-height);
+        font-style: var(--label-01-font-style);
+      }
+
+      .element-homepage .apakah-kursus-ini-2 {
+        position: absolute;
+        width: 63.84%;
+        height: 22.41%;
+        top: 0;
+        left: 10.19%;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-6-medium-font-size);
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-25 {
+        width: 2.91%;
+        height: 22.41%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-6-medium-font-family);
+        font-weight: var(--heading-6-medium-font-weight);
+        color: var(--royal-blue);
+        font-size: var(--heading-6-medium-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-6-medium-letter-spacing);
+        line-height: var(--heading-6-medium-line-height);
+        position: absolute;
+        white-space: nowrap;
+        font-style: var(--heading-6-medium-font-style);
+      }
+
+      .element-homepage .frame-10 {
+        position: absolute;
+        width: 2.67%;
+        height: 19.30%;
+        top: 4.39%;
+        left: 96.60%;
+        opacity: 0.6;
+      }
+
+      .element-homepage .vector-9 {
+        position: absolute;
+        width: 50.00%;
+        height: 50.00%;
+        top: 21.58%;
+        left: 20.45%;
+      }
+
+      .element-homepage .faq-heading {
+        width: 25.81%;
+        height: 21.31%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      .element-homepage .text-wrapper-26 {
+        position: absolute;
+        width: 98.80%;
+        height: 63.26%;
+        top: 0;
+        left: 0;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: var(--dark-blue);
+        font-size: 28px;
+        letter-spacing: 0.14px;
+        line-height: 47.6px;
+      }
+
+      .element-homepage .lorem-ipsum-dolor-2 {
+        width: 98.49%;
+        height: 15.81%;
+        top: 84.19%;
+        left: 0;
+        opacity: 0.7;
+        color: var(--dark-blue);
+        position: absolute;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .registration {
+        position: absolute;
+        top: 4537px;
+        left: 70px;
+        width: 1301px;
+        height: 691px;
+      }
+
+      .element-homepage .start-convert {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .element-homepage .https-www-pexels-com {
+        position: absolute;
+        width: 51.19%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+
+      .element-homepage .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #1c1e5399;
+      }
+
+      .element-homepage .heading-2 {
+        position: absolute;
+        width: 34.44%;
+        height: 36.61%;
+        top: 10.85%;
+        left: 5.76%;
+      }
+
+      .element-homepage .sebuah-layanan-e {
+        position: absolute;
+        width: 93.08%;
+        height: 11.07%;
+        top: 88.93%;
+        left: 0;
+        font-family: var(--body-2-font-family);
+        font-weight: var(--body-2-font-weight);
+        color: #ffffff;
+        font-size: var(--body-2-font-size);
+        text-align: center;
+        letter-spacing: var(--body-2-letter-spacing);
+        line-height: var(--body-2-line-height);
+        font-style: var(--body-2-font-style);
+      }
+
+      .element-homepage .selangkah-lebih {
+        position: absolute;
+        width: 99.11%;
+        height: 26.48%;
+        top: 0;
+        left: 0;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: var(--white);
+        font-size: 42px;
+        letter-spacing: 0.21px;
+        line-height: 67.2px;
+      }
+
+      .element-homepage .form {
+        position: absolute;
+        width: 48.81%;
+        height: 100%;
+        top: 0;
+        left: 51.19%;
+        background-color: #d84040;
+      }
+
+      .element-homepage .group-28 {
+        position: relative;
+        width: 68.98%;
+        height: 78.44%;
+        top: 10.85%;
+        left: 16.06%;
+      }
+
+      .element-homepage .sudah-punya-akun {
+        position: absolute;
+        width: 68.26%;
+        height: 4.98%;
+        top: 95.02%;
+        left: 22.60%;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: var(--white);
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .span {
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        font-family: var(--heading-8-regular-font-family);
+        font-style: var(--heading-8-regular-font-style);
+        font-weight: var(--heading-8-regular-font-weight);
+        line-height: var(--heading-8-regular-line-height);
+        font-size: var(--heading-8-regular-font-size);
+      }
+
+      .element-homepage .button-4 {
+        position: absolute;
+        width: 99.09%;
+        height: 11.81%;
+        top: 78.23%;
+        left: 0;
+      }
+
+      .element-homepage .rectangle-7 {
+        width: 99.54%;
+        background-color: #fcd980;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+      }
+
+      .element-homepage .d-a-f-t-a-r {
+        position: absolute;
+        width: 19.59%;
+        height: 42.19%;
+        top: 29.69%;
+        left: 40.09%;
+        font-family: var(--heading-8-bold-font-family);
+        font-weight: var(--heading-8-bold-font-weight);
+        color: #282938;
+        font-size: var(--heading-8-bold-font-size);
+        text-align: center;
+        letter-spacing: var(--heading-8-bold-letter-spacing);
+        line-height: var(--heading-8-bold-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-bold-font-style);
+      }
+
+      .element-homepage .daftarkan-dirimu {
+        position: absolute;
+        width: 98.63%;
+        height: 8.86%;
+        top: 0;
+        left: 0;
+        font-family: "Poppins-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 28px;
+        letter-spacing: 0.14px;
+        line-height: 47.6px;
+      }
+
+      .element-homepage .persiapkan-diri {
+        position: absolute;
+        width: 98.63%;
+        height: 4.43%;
+        top: 11.81%;
+        left: 0;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--grey);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .place-holder {
+        position: absolute;
+        width: 98.63%;
+        height: 41.33%;
+        top: 29.52%;
+        left: 0;
+      }
+
+      .element-homepage .rectangle-8 {
+        width: 100%;
+        height: 28.57%;
+        top: 0;
+        border-radius: 8px;
+        border: 1.5px solid;
+        border-color: #ffffff1a;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .rectangle-9 {
+        width: 100%;
+        height: 28.57%;
+        top: 35.71%;
+        border-radius: 8px;
+        border: 1.5px solid;
+        border-color: #ffffff1a;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .rectangle-10 {
+        width: 100%;
+        height: 28.57%;
+        top: 71.43%;
+        border-radius: 8px;
+        border: 1.5px solid;
+        border-color: #ffffff1a;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .group-29 {
+        position: absolute;
+        width: 21.99%;
+        height: 82.14%;
+        top: 8.04%;
+        left: 7.41%;
+      }
+
+      .element-homepage .text-wrapper-27 {
+        position: absolute;
+        width: 93.68%;
+        height: 13.04%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--grey);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-28 {
+        position: absolute;
+        width: 46.32%;
+        height: 13.04%;
+        top: 43.48%;
+        left: 0;
+        opacity: 0.5;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--grey);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .pas {
+        position: absolute;
+        width: 81.05%;
+        height: 13.04%;
+        top: 86.96%;
+        left: 0;
+        opacity: 0.5;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--grey);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .footer {
+        position: absolute;
+        top: 5410px;
+        left: 0;
+        width: 1440px;
+        height: 440px;
+        background-color: transparent;
+      }
+
+      .element-homepage .rectangle-11 {
+        width: 100%;
+        height: 81.82%;
+        top: 0;
+        background-color: #d84040;
+        position: absolute;
+        left: 0;
+      }
+
+      .element-homepage .EDUFREE-2 {
+        position: absolute;
+        width: 20.90%;
+        height: 7.73%;
+        top: 15.91%;
+        left: 4.86%;
+        font-family: var(--heading-6-bold-font-family);
+        font-weight: var(--heading-6-bold-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-6-bold-font-size);
+        letter-spacing: var(--heading-6-bold-letter-spacing);
+        line-height: var(--heading-6-bold-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-6-bold-font-style);
+      }
+
+      .element-homepage .lorem-ipsum-dolor-3 {
+        width: 22.71%;
+        height: 5.45%;
+        top: 26.14%;
+        left: 4.86%;
+        opacity: 0.9;
+        color: #ffffff;
+        position: absolute;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .group-30 {
+        position: absolute;
+        width: 100%;
+        height: 18.18%;
+        top: 81.82%;
+        left: 0;
+        background-color: #ffffff;
+      }
+
+      .element-homepage .group-31 {
+        position: relative;
+        width: 84.72%;
+        height: 33.75%;
+        top: 33.75%;
+        left: 5.14%;
+      }
+
+      .element-homepage .copyright-EDUFREE {
+        position: absolute;
+        width: 29.67%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-8-medium-font-family);
+        font-weight: var(--heading-8-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-8-medium-font-size);
+        letter-spacing: var(--heading-8-medium-letter-spacing);
+        line-height: var(--heading-8-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-medium-font-style);
+      }
+
+      .element-homepage .navbar-item {
+        position: absolute;
+        width: 30.41%;
+        height: 88.89%;
+        top: 11.11%;
+        left: 70.08%;
+      }
+
+      .element-homepage .text-wrapper-29 {
+        position: absolute;
+        width: 12.67%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-family: var(--body1-medium-font-family);
+        font-weight: var(--body1-medium-font-weight);
+        color: #282938;
+        font-size: var(--body1-medium-font-size);
+        letter-spacing: var(--body1-medium-letter-spacing);
+        line-height: var(--body1-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-medium-font-style);
+      }
+
+      .element-homepage .TENTANG-KAMI-2 {
+        position: absolute;
+        width: 32.88%;
+        height: 100%;
+        top: 0;
+        left: 22.10%;
+        font-family: var(--body1-medium-font-family);
+        font-weight: var(--body1-medium-font-weight);
+        color: #282938;
+        font-size: var(--body1-medium-font-size);
+        letter-spacing: var(--body1-medium-letter-spacing);
+        line-height: var(--body1-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-medium-font-style);
+      }
+
+      .element-homepage .KURSUS-2 {
+        position: absolute;
+        width: 19.95%;
+        height: 100%;
+        top: 0;
+        left: 63.07%;
+        font-family: var(--body1-medium-font-family);
+        font-weight: var(--body1-medium-font-weight);
+        color: #282938;
+        font-size: var(--body1-medium-font-size);
+        letter-spacing: var(--body1-medium-letter-spacing);
+        line-height: var(--body1-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-medium-font-style);
+      }
+
+      .element-homepage .text-wrapper-30 {
+        width: 8.63%;
+        height: 100%;
+        left: 89.22%;
+        font-family: var(--body1-medium-font-family);
+        font-weight: var(--body1-medium-font-weight);
+        color: #282938;
+        font-size: var(--body1-medium-font-size);
+        letter-spacing: var(--body1-medium-letter-spacing);
+        line-height: var(--body1-medium-line-height);
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        font-style: var(--body1-medium-font-style);
+      }
+
+      .element-homepage .info-wrapper {
+        position: absolute;
+        width: 29.17%;
+        height: 20.00%;
+        top: 61.82%;
+        left: 4.86%;
+        background-color: #fcd980;
+      }
+
+      .element-homepage .info {
+        position: relative;
+        width: 86.67%;
+        height: 65.91%;
+        top: 17.05%;
+        left: 7.14%;
+      }
+
+      .element-homepage .text-wrapper-31 {
+        position: absolute;
+        width: 49.73%;
+        height: 41.38%;
+        top: 58.62%;
+        left: 0;
+        opacity: 0.8;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-32 {
+        position: absolute;
+        width: 14.01%;
+        height: 46.55%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-8-medium-font-family);
+        font-weight: var(--heading-8-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-8-medium-font-size);
+        letter-spacing: var(--heading-8-medium-letter-spacing);
+        line-height: var(--heading-8-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-medium-font-style);
+      }
+
+      .element-homepage .element {
+        position: absolute;
+        width: 40.11%;
+        height: 41.38%;
+        top: 56.90%;
+        left: 57.69%;
+        opacity: 0.8;
+        font-family: var(--body1-regular-font-family);
+        font-weight: var(--body1-regular-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--body1-regular-font-size);
+        letter-spacing: var(--body1-regular-letter-spacing);
+        line-height: var(--body1-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--body1-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-33 {
+        position: absolute;
+        width: 26.65%;
+        height: 46.55%;
+        top: 0;
+        left: 57.69%;
+        font-family: var(--heading-8-medium-font-family);
+        font-weight: var(--heading-8-medium-font-weight);
+        color: var(--dark-blue);
+        font-size: var(--heading-8-medium-font-size);
+        letter-spacing: var(--heading-8-medium-letter-spacing);
+        line-height: var(--heading-8-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-medium-font-style);
+      }
+
+      .element-homepage .undraw-education {
+        position: absolute;
+        top: 204px;
+        left: 850px;
+        width: 524px;
+        height: 380px;
+      }
+
+      .element-homepage .arrow-down-circle {
+        position: absolute;
+        top: 895px;
+        left: 678px;
+        width: 85px;
+        height: 82px;
+      }
+
+      .element-homepage .icon {
+        position: absolute;
+        width: 83.33%;
+        height: 83.33%;
+        top: 5.89%;
+        left: 5.98%;
+      }
+
+      .element-homepage .generic-avatar {
+        position: absolute;
+        top: 3112px;
+        left: 518px;
+        width: 63px;
+        height: 57px;
+        background-color: #eaddff;
+        border-radius: 100px;
+        overflow: hidden;
+      }
+
+      .element-homepage .avatar-placeholder {
+        position: absolute;
+        width: 70.46%;
+        height: 64.08%;
+        top: 25.00%;
+        left: 14.77%;
+      }
+
+      .element-homepage .frame-11 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 48.07%;
+        left: 12.85%;
+        opacity: 0.8;
+      }
+
+      .element-homepage .vector-10 {
+        position: absolute;
+        width: 21.66%;
+        height: 26.11%;
+        top: 33.82%;
+        left: 38.54%;
+      }
+
+      .element-homepage .frame-12 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 48.07%;
+        left: 44.65%;
+        opacity: 0.8;
+      }
+
+      .element-homepage .frame-13 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 48.07%;
+        left: 76.11%;
+        opacity: 0.8;
+      }
+
+      .element-homepage .group-32 {
+        position: absolute;
+        width: 597px;
+        height: 144px;
+        top: 5497px;
+        left: 695px;
+      }
+
+      .element-homepage .support {
+        position: absolute;
+        width: 23.12%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .element-homepage .text-wrapper-34 {
+        position: absolute;
+        width: 68.84%;
+        height: 18.75%;
+        top: 35.42%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-35 {
+        position: absolute;
+        width: 44.20%;
+        height: 18.75%;
+        top: 56.94%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-36 {
+        position: absolute;
+        width: 52.90%;
+        height: 18.75%;
+        top: 81.25%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .sosial-media {
+        position: absolute;
+        width: 94.20%;
+        height: 20.83%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-7-medium-font-family);
+        font-weight: var(--heading-7-medium-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-medium-font-size);
+        letter-spacing: var(--heading-7-medium-letter-spacing);
+        line-height: var(--heading-7-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-7-medium-font-style);
+      }
+
+      .element-homepage .support-2 {
+        width: 21.94%;
+        height: 100%;
+        left: 79.40%;
+        position: absolute;
+        top: 0;
+      }
+
+      .element-homepage .tentang-kami {
+        position: absolute;
+        width: 61.83%;
+        height: 18.75%;
+        top: 35.42%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .ketentuan {
+        position: absolute;
+        width: 61.83%;
+        height: 18.75%;
+        top: 56.94%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .kebijakan-privasi {
+        position: absolute;
+        width: 93.89%;
+        height: 18.75%;
+        top: 81.25%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .DUKUNGAN {
+        position: absolute;
+        width: 68.70%;
+        height: 20.83%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-7-medium-font-family);
+        font-weight: var(--heading-7-medium-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-medium-font-size);
+        letter-spacing: var(--heading-7-medium-letter-spacing);
+        line-height: var(--heading-7-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-7-medium-font-style);
+      }
+
+      .element-homepage .support-3 {
+        width: 20.60%;
+        height: 75.69%;
+        left: 38.19%;
+        position: absolute;
+        top: 0;
+      }
+
+      .element-homepage .merdeka-belajar {
+        position: absolute;
+        width: 95.12%;
+        height: 24.77%;
+        top: 46.79%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .finterpreneur {
+        position: absolute;
+        width: 89.43%;
+        height: 24.77%;
+        top: 75.23%;
+        left: 0;
+        font-family: var(--heading-8-regular-font-family);
+        font-weight: var(--heading-8-regular-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-8-regular-font-size);
+        letter-spacing: var(--heading-8-regular-letter-spacing);
+        line-height: var(--heading-8-regular-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-8-regular-font-style);
+      }
+
+      .element-homepage .text-wrapper-37 {
+        position: absolute;
+        width: 72.36%;
+        height: 27.52%;
+        top: 0;
+        left: 0;
+        font-family: var(--heading-7-medium-font-family);
+        font-weight: var(--heading-7-medium-font-weight);
+        color: #ffffff;
+        font-size: var(--heading-7-medium-font-size);
+        letter-spacing: var(--heading-7-medium-letter-spacing);
+        line-height: var(--heading-7-medium-line-height);
+        white-space: nowrap;
+        font-style: var(--heading-7-medium-font-style);
+      }
+
+      /* --- styleguide.css content --- */
+      :root {
+        --dark-blue: rgba(40, 41, 56, 1);
+        --royal-blue: rgba(36, 5, 242, 1);
+        --white: rgba(255, 255, 255, 1);
+        --grey: rgba(244, 246, 252, 1);
+        --body1-regular-font-family: "Poppins", Helvetica;
+        --body1-regular-font-weight: 400;
+        --body1-regular-font-size: 16px;
+        --body1-regular-letter-spacing: 0px;
+        --body1-regular-line-height: 150%;
+        --body1-regular-font-style: normal;
+        --heading-6-font-family: "Poppins", Helvetica;
+        --heading-6-font-weight: 500;
+        --heading-6-font-size: 24px;
+        --heading-6-letter-spacing: 0px;
+        --heading-6-line-height: 36px;
+        --heading-6-font-style: normal;
+        --body-1-font-family: "Poppins", Helvetica;
+        --body-1-font-weight: 400;
+        --body-1-font-size: 16px;
+        --body-1-letter-spacing: 0px;
+        --body-1-line-height: 28px;
+        --body-1-font-style: normal;
+        --heading-7-semibold-font-family: "Poppins", Helvetica;
+        --heading-7-semibold-font-weight: 600;
+        --heading-7-semibold-font-size: 20px;
+        --heading-7-semibold-letter-spacing: 0.1px;
+        --heading-7-semibold-line-height: 150%;
+        --heading-7-semibold-font-style: normal;
+        --heading-7-bold-font-family: "Poppins", Helvetica;
+        --heading-7-bold-font-weight: 700;
+        --heading-7-bold-font-size: 20px;
+        --heading-7-bold-letter-spacing: 0.1px;
+        --heading-7-bold-line-height: 150%;
+        --heading-7-bold-font-style: normal;
+        --heading-8-bold-font-family: "Poppins", Helvetica;
+        --heading-8-bold-font-weight: 700;
+        --heading-8-bold-font-size: 18px;
+        --heading-8-bold-letter-spacing: 0.09px;
+        --heading-8-bold-line-height: 150%;
+        --heading-8-bold-font-style: normal;
+        --heading-8-medium-font-family: "Poppins", Helvetica;
+        --heading-8-medium-font-weight: 500;
+        --heading-8-medium-font-size: 18px;
+        --heading-8-medium-letter-spacing: 0.09px;
+        --heading-8-medium-line-height: 150%;
+        --heading-8-medium-font-style: normal;
+        --heading-6-medium-font-family: "Poppins", Helvetica;
+        --heading-6-medium-font-weight: 500;
+        --heading-6-medium-font-size: 24px;
+        --heading-6-medium-letter-spacing: 0.12px;
+        --heading-6-medium-line-height: 139.9999976158142%;
+        --heading-6-medium-font-style: normal;
+        --body3-medium-font-family: "Poppins", Helvetica;
+        --body3-medium-font-weight: 500;
+        --body3-medium-font-size: 12px;
+        --body3-medium-letter-spacing: 0px;
+        --body3-medium-line-height: 150%;
+        --body3-medium-font-style: normal;
+        --heading-5-medium-font-family: "Poppins", Helvetica;
+        --heading-5-medium-font-weight: 500;
+        --heading-5-medium-font-size: 26px;
+        --heading-5-medium-letter-spacing: 0.13px;
+        --heading-5-medium-line-height: 139.9999976158142%;
+        --heading-5-medium-font-style: normal;
+        --caption1-medium-font-family: "Poppins", Helvetica;
+        --caption1-medium-font-weight: 500;
+        --caption1-medium-font-size: 12px;
+        --caption1-medium-letter-spacing: 0px;
+        --caption1-medium-line-height: 139.9999976158142%;
+        --caption1-medium-font-style: normal;
+        --body1-medium-font-family: "Poppins", Helvetica;
+        --body1-medium-font-weight: 500;
+        --body1-medium-font-size: 16px;
+        --body1-medium-letter-spacing: 0px;
+        --body1-medium-line-height: 150%;
+        --body1-medium-font-style: normal;
+        --heading-6-bold-font-family: "Poppins", Helvetica;
+        --heading-6-bold-font-weight: 700;
+        --heading-6-bold-font-size: 24px;
+        --heading-6-bold-letter-spacing: 0.12px;
+        --heading-6-bold-line-height: 139.9999976158142%;
+        --heading-6-bold-font-style: normal;
+        --label-01-font-family: "Poppins", Helvetica;
+        --label-01-font-weight: 500;
+        --label-01-font-size: 18px;
+        --label-01-letter-spacing: 0px;
+        --label-01-line-height: 32px;
+        --label-01-font-style: normal;
+        --body-2-font-family: "Poppins", Helvetica;
+        --body-2-font-weight: 500;
+        --body-2-font-size: 16px;
+        --body-2-letter-spacing: 0px;
+        --body-2-line-height: 28px;
+        --body-2-font-style: normal;
+        --heading-8-regular-font-family: "Poppins", Helvetica;
+        --heading-8-regular-font-weight: 400;
+        --heading-8-regular-font-size: 18px;
+        --heading-8-regular-letter-spacing: 0.09px;
+        --heading-8-regular-line-height: 150%;
+        --heading-8-regular-font-style: normal;
+        --heading-7-medium-font-family: "Poppins", Helvetica;
+        --heading-7-medium-font-weight: 500;
+        --heading-7-medium-font-size: 20px;
+        --heading-7-medium-letter-spacing: 0.1px;
+        --heading-7-medium-line-height: 150%;
+        --heading-7-medium-font-style: normal;
+        --m3-schemes-primary-container: rgba(234, 221, 255, 1);
+      }
+
+      /*
+
+      To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+      <body data-m3-mode="light">
+          </body>
+
+      You can apply the theme on any DOM node, not just the `body`
+
+      */
+
+      [data-m3-mode="light"] {
+        --m3-schemes-primary-container: rgba(234, 221, 255, 1);
+      }
+
+      [data-m3-mode="light-high-contrast"] {
+        --m3-schemes-primary-container: rgba(73, 57, 113, 1);
+      }
+
+      [data-m3-mode="light-medium-contrast"] {
+        --m3-schemes-primary-container: rgba(123, 107, 167, 1);
+      }
+
+      [data-m3-mode="dark"] {
+        --m3-schemes-primary-container: rgba(79, 55, 139, 1);
+      }
+
+      [data-m3-mode="dark-high-contrast"] {
+        --m3-schemes-primary-container: rgba(211, 193, 255, 1);
+      }
+
+      [data-m3-mode="dark-medium-contrast"] {
+        --m3-schemes-primary-container: rgba(152, 135, 197, 1);
+      }
+
+      [data-m3-mode="monochrome-LT"] {
+        --m3-schemes-primary-container: rgba(59, 59, 59, 1);
+      }
+
+      [data-m3-mode="monochrome-DT"] {
+        --m3-schemes-primary-container: rgba(212, 212, 212, 1);
+      }
+
+      [data-m3-mode="pink-LT"] {
+        --m3-schemes-primary-container: rgba(254, 176, 209, 1);
+      }
+
+      [data-m3-mode="pink-DT"] {
+        --m3-schemes-primary-container: rgba(109, 51, 80, 1);
+      }
+
+      [data-m3-mode="rose-LT"] {
+        --m3-schemes-primary-container: rgba(253, 166, 179, 1);
+      }
+
+      [data-m3-mode="rose-DT"] {
+        --m3-schemes-primary-container: rgba(114, 51, 63, 1);
+      }
+
+      [data-m3-mode="red-LT"] {
+        --m3-schemes-primary-container: rgba(253, 164, 153, 1);
+      }
+
+      [data-m3-mode="red-DT"] {
+        --m3-schemes-primary-container: rgba(115, 52, 44, 1);
+      }
+
+      [data-m3-mode="orange-LT"] {
+        --m3-schemes-primary-container: rgba(255, 174, 127, 1);
+      }
+
+      [data-m3-mode="orange-DT"] {
+        --m3-schemes-primary-container: rgba(111, 56, 18, 1);
+      }
+
+      [data-m3-mode="yellow-LT"] {
+        --m3-schemes-primary-container: rgba(255, 213, 125, 1);
+      }
+
+      [data-m3-mode="yellow-DT"] {
+        --m3-schemes-primary-container: rgba(109, 80, 0, 1);
+      }
+
+      [data-m3-mode="chartreuse-LT"] {
+        --m3-schemes-primary-container: rgba(221, 230, 146, 1);
+      }
+
+      [data-m3-mode="chartreuse-DT"] {
+        --m3-schemes-primary-container: rgba(67, 75, 6, 1);
+      }
+
+      [data-m3-mode="green-LT"] {
+        --m3-schemes-primary-container: rgba(183, 241, 185, 1);
+      }
+
+      [data-m3-mode="green-DT"] {
+        --m3-schemes-primary-container: rgba(29, 81, 40, 1);
+      }
+
+      [data-m3-mode="teal-LT"] {
+        --m3-schemes-primary-container: rgba(158, 242, 227, 1);
+      }
+
+      [data-m3-mode="teal-DT"] {
+        --m3-schemes-primary-container: rgba(0, 107, 95, 1);
+      }
+
+      [data-m3-mode="cyan-LT"] {
+        --m3-schemes-primary-container: rgba(154, 229, 253, 1);
+      }
+
+      [data-m3-mode="cyan-DT"] {
+        --m3-schemes-primary-container: rgba(0, 103, 124, 1);
+      }
+
+      [data-m3-mode="blue-LT"] {
+        --m3-schemes-primary-container: rgba(173, 195, 254, 1);
+      }
+
+      [data-m3-mode="blue-DT"] {
+        --m3-schemes-primary-container: rgba(46, 69, 120, 1);
+      }
+
+      [data-m3-mode="indigo-LT"] {
+        --m3-schemes-primary-container: rgba(193, 189, 254, 1);
+      }
+
+      [data-m3-mode="indigo-DT"] {
+        --m3-schemes-primary-container: rgba(68, 64, 120, 1);
+      }
+
+      [data-m3-mode="purple-LT"] {
+        --m3-schemes-primary-container: rgba(217, 189, 254, 1);
+      }
+
+      [data-m3-mode="purple-DT"] {
+        --m3-schemes-primary-container: rgba(82, 60, 115, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element-homepage">
+      <header class="header">
+        <div class="text-left">
+          <div class="text-wrapper">HCMUT TUTOR SYSTEM</div>
+          <div class="div">Strive for Greatness !!</div>
+          <button class="button">
+            <div class="rectangle"></div>
+            <div class="text-wrapper-2">LOGIN</div>
+          </button>
+        </div>
+        <div class="group">
+          <div class="text-wrapper-3">Courses</div>
+          <div class="frame"><img class="vector" src="img/vector-9.svg" /></div>
+        </div>
+      </header>
+      <div class="benefits">
+        <p class="what-will-you">What will you receive with <br />HCMUT Tutor System?</p>
+        <div class="group-2">
+          <div class="card">
+            <div class="group-3">
+              <img class="mask-group" src="img/mask-group.png" />
+              <div class="text-wrapper-4">3</div>
+            </div>
+            <div class="point-text">
+              <div class="text-wrapper-5">Help and Support</div>
+              <div class="text-wrapper-6">
+                cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+              </div>
+            </div>
+          </div>
+          <div class="group-wrapper">
+            <div class="group-3">
+              <img class="mask-group" src="img/mask-group-5.png" />
+              <div class="text-wrapper-4">6</div>
+            </div>
+          </div>
+          <div class="card-2">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-7">Connection</div>
+            <div class="text-wrapper-8">
+              bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </div>
+            <div class="group-4">
+              <img class="mask-group" src="img/mask-group-4.png" />
+              <div class="text-wrapper-4">2</div>
+            </div>
+          </div>
+          <div class="div-wrapper">
+            <div class="group-3">
+              <img class="mask-group" src="img/image.png" />
+              <div class="text-wrapper-4">5</div>
+            </div>
+          </div>
+          <div class="card-3">
+            <div class="rectangle-3"></div>
+            <div class="text-wrapper-9">Huge document repository</div>
+            <div class="text-wrapper-9">Huge document repository</div>
+            <div class="text-wrapper-9">Huge document repository</div>
+            <div class="text-wrapper-10">aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />aaaaaaaaa<br />aaaaaaaaaa</div>
+            <div class="text-wrapper-10">aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />aaaaaaaaa<br />aaaaaaaaaa</div>
+            <div class="group-4">
+              <img class="mask-group" src="img/mask-group-3.png" />
+              <div class="text-wrapper-11">1</div>
+            </div>
+          </div>
+          <div class="card-4">
+            <div class="group-3">
+              <img class="mask-group" src="img/mask-group-2.png" />
+              <div class="text-wrapper-12">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle-4"></div>
+      <div class="courses">
+        <div class="group-5">
+          <div class="highlighted-COURSES">Highlighted “COURSES&#34;</div>
+          <button class="button-2">
+            <div class="rectangle"></div>
+            <div class="text-wrapper-13">Lihat Semua</div>
+          </button>
+          <button class="button-2">
+            <div class="rectangle"></div>
+            <div class="text-wrapper-14">MORE</div>
+          </button>
+          <div class="group-6">
+            <div class="text-wrapper-15">Catergory</div>
+            <div class="vector-wrapper"><img class="img" src="img/vector-3.svg" /></div>
+          </div>
+          <img class="line" src="img/line-3.svg" />
+        </div>
+        <div class="group-7">
+          <div class="group-8">
+            <img class="img-2" src="img/unsplash-m-hrflhgabo.png" />
+            <div class="group-9">
+              <div class="project-title">WEB PROGRAMMING</div>
+              <img class="project-title-2" src="img/project-title.png" />
+              <div class="group-10">
+                <div class="group-11">
+                  <div class="img-wrapper"><img class="vector-2" src="img/vector-10.svg" /></div>
+                  <div class="project-title-3">60 hrs</div>
+                </div>
+                <div class="group-12">
+                  <div class="project-title-4">43 Video</div>
+                  <div class="frame-2">
+                    <img class="vector-3" src="img/vector-23.svg" /> <img class="vector-4" src="img/image.svg" />
+                  </div>
+                </div>
+                <div class="group-13">
+                  <div class="frame-3"><img class="vector-5" src="img/vector-20.svg" /></div>
+                  <div class="project-title-5">14.900 Views</div>
+                </div>
+              </div>
+            </div>
+            <div class="group-14">
+              <img class="rectangle-5" src="img/rectangle-1344.svg" />
+              <div class="frame-4"><img class="vector-6" src="img/vector-25.svg" /></div>
+              <div class="text-wrapper-16">4,9</div>
+            </div>
+          </div>
+          <div class="group-8">
+            <img class="img-2" src="img/pexels-lukas-590016-1.png" />
+            <div class="group-15">
+              <div class="project-title-6">DIGITAL MARKETING</div>
+              <p class="p">Materi mengenai strategi dan konsep marketing&nbsp;&nbsp;pemula</p>
+            </div>
+            <div class="group-14">
+              <img class="rectangle-5" src="img/rectangle-1344-2.svg" />
+              <div class="frame-4"><img class="vector-6" src="img/vector-19.svg" /></div>
+              <div class="text-wrapper-16">4,9</div>
+            </div>
+          </div>
+          <div class="group-8">
+            <img class="img-2" src="img/pexels-olya-kobruseva-5561923-1.png" />
+            <div class="group-15">
+              <div class="project-title-6">DATA ANALYZING</div>
+              <p class="p">Materi pembelajaran mengenai dasar-dasar data science</p>
+            </div>
+            <div class="group-14">
+              <img class="rectangle-5" src="img/rectangle-1344-3.svg" />
+              <div class="frame-4"><img class="vector-6" src="img/vector-13.svg" /></div>
+              <div class="text-wrapper-16">4,9</div>
+            </div>
+          </div>
+        </div>
+        <img class="video" src="img/video.svg" />
+      </div>
+      <div class="group-16">
+        <div class="group-17">
+          <div class="img-wrapper"><img class="vector-2" src="img/vector-14.svg" /></div>
+          <div class="project-title-7">42 hrs</div>
+        </div>
+        <div class="group-18">
+          <div class="project-title-4">20 Videos</div>
+          <div class="frame-5">
+            <img class="vector-3" src="img/vector-24.svg" /> <img class="vector-4" src="img/vector-17.svg" />
+          </div>
+        </div>
+        <div class="group-19">
+          <div class="frame-3"><img class="vector-5" src="img/vector.svg" /></div>
+          <div class="project-title-8">820 Views</div>
+        </div>
+      </div>
+      <div class="group-20">
+        <div class="group-17">
+          <div class="img-wrapper"><img class="vector-2" src="img/vector-6.svg" /></div>
+          <div class="project-title-7">58 hrs</div>
+        </div>
+        <div class="group-21">
+          <div class="project-title-4">32 Videos</div>
+          <div class="frame-6">
+            <img class="vector-3" src="img/vector-12.svg" /> <img class="vector-4" src="img/vector-22.svg" />
+          </div>
+        </div>
+        <div class="group-22">
+          <div class="frame-3"><img class="vector-5" src="img/vector-5.svg" /></div>
+          <div class="project-title-9">22.300 Views</div>
+        </div>
+      </div>
+      <div class="testimonies">
+        <div class="group-23">
+          <div class="heading">
+            <p class="text-wrapper-17">What They Say About HCMUT Tutor System</p>
+            <div class="over-reviews">“Over 12.000 reviews&#34;</div>
+          </div>
+          <div class="content">
+            <p class="text-wrapper-18">
+              “Dinh noc kich tran bay phap phoi. Day la nen tang ma Tung su dung de tim kiem nguoi ho tro hoc tap va lay
+              tai lieu moi ngay. Rat biet on he thong da cung cap dich vu tuyet voi nay !!”
+            </p>
+          </div>
+        </div>
+        <div class="group-24">
+          <div class="profile">
+            <div class="group-25">
+              <div class="name">Son Tung MTP</div>
+              <div class="designation">Singer</div>
+            </div>
+          </div>
+          <div class="group-26">
+            <div class="ellipse"></div>
+            <div class="ellipse-2"></div>
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+          </div>
+        </div>
+      </div>
+      <div class="navigasi">
+        <div class="button-3">
+          <div class="rectangle-6"></div>
+          <div class="text-wrapper-19">Login</div>
+        </div>
+        <div class="navbar">
+          <div class="text-wrapper-20">HOME</div>
+          <div class="TENTANG-KAMI">TUTOR</div>
+          <div class="KURSUS">COURSES</div>
+          <div class="FAQ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOG</div>
+          <div class="group-27">
+            <div class="BLOG"></div>
+            <div class="frame-7"><img class="vector-7" src="img/vector-2.svg" /></div>
+          </div>
+        </div>
+        <div class="EDUFREE">[LOGO]</div>
+      </div>
+      <div class="FAQ-2">
+        <div class="question">
+          <div class="qn">
+            <img class="img-3" src="img/image-2.svg" />
+            <p class="apakah-ada">Can I join this course with my friend from another <br />universities ?</p>
+            <div class="text-wrapper-21">05</div>
+          </div>
+          <img class="line-2" src="img/line-2.svg" />
+          <div class="qn-2">
+            <p class="sampai-kapan-kursus">I need the phone contact for some help.</p>
+            <div class="text-wrapper-22">04</div>
+            <div class="frame-8"><img class="vector-8" src="img/vector-7.svg" /></div>
+          </div>
+          <img class="line-3" src="img/line-4.svg" />
+          <div class="qn-3">
+            <p class="apakah-kursus-ini">Are the tutors good enough ?</p>
+            <div class="text-wrapper-23">03</div>
+            <div class="frame-8"><img class="vector-8" src="img/vector-27.svg" /></div>
+          </div>
+          <img class="line-4" src="img/line.svg" />
+          <div class="qn-4">
+            <p class="untuk-siapa-kursus">How many courses dóe this system has ?</p>
+            <div class="text-wrapper-24">02</div>
+            <div class="frame-9"><img class="vector-8" src="img/vector-4.svg" /></div>
+          </div>
+          <img class="line-5" src="img/line-5.svg" />
+          <div class="qn-expand">
+            <p class="lorem-ipsum-dolor">
+              Absolutely yes!! For your informations, this site is built by a HCMUT&nbsp;&nbsp;student group with a lot
+              passion. <br />Have a nice day.
+            </p>
+            <p class="apakah-kursus-ini-2">Does this site ensure privacy and security ?</p>
+            <div class="text-wrapper-25">01</div>
+            <div class="frame-10"><img class="vector-9" src="img/vector-8.svg" /></div>
+          </div>
+        </div>
+        <div class="faq-heading">
+          <div class="text-wrapper-26">Frequently Asked Questions</div>
+          <div class="lorem-ipsum-dolor-2"></div>
+        </div>
+      </div>
+      <div class="registration">
+        <div class="start-convert">
+          <img class="https-www-pexels-com" src="img/png.png" />
+          <div class="background"></div>
+          <div class="heading-2">
+            <p class="sebuah-layanan-e">Ready to dive in ?!</p>
+            <div class="selangkah-lebih">HCMUT TutorSystem</div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="group-28">
+            <p class="sudah-punya-akun">
+              <span class="span">Already have an account?</span> <span class="span"> LOGIN</span>
+            </p>
+            <div class="button-4">
+              <div class="rectangle-7"></div>
+              <div class="d-a-f-t-a-r">REGISTER</div>
+            </div>
+            <div class="daftarkan-dirimu">Let’s go !!!</div>
+            <div class="persiapkan-diri"></div>
+            <div class="place-holder">
+              <div class="rectangle-8"></div>
+              <div class="rectangle-9"></div>
+              <div class="rectangle-10"></div>
+              <div class="group-29">
+                <div class="text-wrapper-27">Your Name</div>
+                <div class="text-wrapper-28">Email</div>
+                <div class="pas">Password</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="rectangle-11"></div>
+        <div class="EDUFREE-2">[HCMUT TUTOR SYSTEM]</div>
+        <div class="lorem-ipsum-dolor-3">STRIVE FOR GREATNESS</div>
+        <div class="group-30">
+          <div class="group-31">
+            <p class="copyright-EDUFREE">© Copyright HCMUT TUTORSYSTEM 2025</p>
+            <div class="navbar-item">
+              <div class="text-wrapper-29">HOME</div>
+              <div class="TENTANG-KAMI-2">ABOUT CENTER</div>
+              <div class="KURSUS-2">COURSES</div>
+              <div class="text-wrapper-30">FAQ</div>
+            </div>
+          </div>
+        </div>
+        <div class="info-wrapper">
+          <div class="info">
+            <div class="text-wrapper-31">contact@website.com</div>
+            <div class="text-wrapper-32">Email</div>
+            <div class="element">+84 6868 6868 68</div>
+            <div class="text-wrapper-33">Telephone</div>
+          </div>
+        </div>
+      </footer>
+      <img class="undraw-education" src="img/undraw-education-3vwh-1.svg" />
+      <div class="arrow-down-circle"><img class="icon" src="img/icon.svg" /></div>
+      <div class="generic-avatar"><img class="avatar-placeholder" src="img/avatar-placeholder.svg" /></div>
+      <div class="frame-11">
+        <img class="vector-10" src="img/vector-16.svg" /> <img class="vector-2" src="img/vector-18.svg" />
+      </div>
+      <div class="frame-12">
+        <img class="vector-10" src="img/vector-15.svg" /> <img class="vector-2" src="img/vector-11.svg" />
+      </div>
+      <div class="frame-13">
+        <img class="vector-10" src="img/vector-21.svg" /> <img class="vector-2" src="img/vector-26.svg" />
+      </div>
+      <div class="group-32">
+        <div class="support">
+          <div class="text-wrapper-34">Instagram</div>
+          <div class="text-wrapper-35">Twitter</div>
+          <div class="text-wrapper-36">LinkedIn</div>
+          <div class="sosial-media">Social Media</div>
+        </div>
+        <div class="support-2">
+          <div class="tentang-kami">About Us</div>
+          <div class="ketentuan">Provision</div>
+          <div class="kebijakan-privasi">Privacy Policy</div>
+          <div class="DUKUNGAN">SUPPORT</div>
+        </div>
+        <div class="support-3">
+          <div class="merdeka-belajar">Free to Learn</div>
+          <div class="finterpreneur">Free to Take</div>
+          <div class="text-wrapper-37">Program</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

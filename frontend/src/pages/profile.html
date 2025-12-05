@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Student Profile - EDUFREE</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        
+        /* CSS Variables */
+        :root {
+            --heading-6-bold-font-family: "Poppins", Helvetica;
+            --heading-6-bold-font-weight: 700;
+            --heading-6-bold-font-size: 24px;
+            --heading-6-bold-letter-spacing: 0.12px;
+            --heading-6-bold-line-height: 139.9999976158142%;
+            --heading-6-bold-font-style: normal;
+            --body2-medium-font-family: "Poppins", Helvetica;
+            --body2-medium-font-weight: 500;
+            --body2-medium-font-size: 14px;
+            --body2-medium-letter-spacing: 0px;
+            --body2-medium-line-height: 150%;
+            --body2-medium-font-style: normal;
+            --body2-regular-font-family: "Poppins", Helvetica;
+            --body2-regular-font-weight: 400;
+            --body2-regular-font-size: 14px;
+            --body2-regular-letter-spacing: 0px;
+            --body2-regular-line-height: 150%;
+            --body2-regular-font-style: normal;
+            --body3-medium-font-family: "Poppins", Helvetica;
+            --body3-medium-font-weight: 500;
+            --body3-medium-font-size: 12px;
+            --body3-medium-letter-spacing: 0px;
+            --body3-medium-line-height: 150%;
+            --body3-medium-font-style: normal;
+        }
+
+        /* Base styles */
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0px;
+            height: 100%;
+        }
+        
+        /* Focus styles for accessibility */
+        button:focus-visible, a:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline: -webkit-focus-ring-color auto 5px !important;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Main Container */
+        .element-profile-SINHVIEN {
+            background-color: #f4f6fc;
+            width: 100%;
+            min-width: 1440px;
+            min-height: 1050px;
+            position: relative;
+        }
+
+        /* Header (Top Left Logo Bar) */
+        .element-profile-SINHVIEN .group {
+            position: absolute;
+            width: 21.39%;
+            height: 7.55%;
+            top: 0;
+            left: 0;
+        }
+        
+        .element-profile-SINHVIEN .rectangle {
+            position: absolute;
+            width: 99.35%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #1c1e53;
+        }
+        
+        .element-profile-SINHVIEN .text-wrapper {
+            position: absolute;
+            width: 41.56%;
+            height: 37.78%;
+            top: 31.11%;
+            left: 28.90%;
+            font-family: var(--heading-6-bold-font-family);
+            font-weight: var(--heading-6-bold-font-weight);
+            color: #ffffff;
+            font-size: var(--heading-6-bold-font-size);
+            letter-spacing: var(--heading-6-bold-letter-spacing);
+            line-height: var(--heading-6-bold-line-height);
+            white-space: nowrap;
+            font-style: var(--heading-6-bold-font-style);
+        }
+
+        /* Side Menu */
+        .element-profile-SINHVIEN .side-menu {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 308px;
+            height: 1055px;
+        }
+        
+        .element-profile-SINHVIEN .div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 306px;
+            height: 1055px;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 60px #e1ecf880;
+        }
+        
+        .element-profile-SINHVIEN .group-2 { /* Top red section of sidebar */
+            position: absolute;
+            width: 100%;
+            height: 7.51%;
+            top: 0;
+            left: 0;
+        }
+        
+        .element-profile-SINHVIEN .rectangle-2 {
+            position: absolute;
+            width: 99.35%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #d84040;
+        }
+        
+        .element-profile-SINHVIEN .text-wrapper-3 {
+            position: absolute;
+            width: 41.56%;
+            height: 37.78%;
+            top: 31.11%;
+            left: 28.90%;
+            font-family: var(--heading-6-bold-font-family);
+            font-weight: var(--heading-6-bold-font-weight);
+            color: #ffffff;
+            font-size: var(--heading-6-bold-font-size);
+            text-align: center;
+            letter-spacing: var(--heading-6-bold-letter-spacing);
+            line-height: var(--heading-6-bold-line-height);
+            white-space: nowrap;
+            font-style: var(--heading-6-bold-font-style);
+        }
+        
+        /* Sidebar Navigation List */
+        .element-profile-SINHVIEN .list {
+            position: absolute;
+            width: 192px;
+            height: 152px;
+            top: 126px;
+            left: 40px;
+        }
+        
+        .element-profile-SINHVIEN .list-menu,
+        .element-profile-SINHVIEN .list-menu-2,
+        .element-profile-SINHVIEN .list-menu-3 {
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .element-profile-SINHVIEN .list-menu {
+            width: 101.04%;
+            height: 14.47%;
+            top: 0;
+        }
+        
+        .element-profile-SINHVIEN .list-menu-2 {
+            width: 63.02%;
+            height: 15.13%;
+            top: 41.45%;
+        }
+        
+        .element-profile-SINHVIEN .list-menu-3 {
+            width: 54.69%;
+            height: 15.13%;
+            top: 84.87%;
+        }
+        
+        /* Icon placeholders (as background images or containers) */
+        .element-profile-SINHVIEN .frame,
+        .element-profile-SINHVIEN .frame-2,
+        .element-profile-SINHVIEN .frame-3 {
+            position: absolute;
+            height: 100%;
+            left: 0;
+        }
+        
+        .element-profile-SINHVIEN .frame {
+            width: 11.34%;
+            top: 0;
+            background-image: url(./img/image.svg);
+            background-size: 100% 100%;
+        }
+        
+        .element-profile-SINHVIEN .frame-2 {
+            width: 18.18%;
+            top: 0;
+            height: 95.65%;
+            background-image: url(./img/vector.svg);
+            background-size: 100% 100%;
+        }
+        
+        .element-profile-SINHVIEN .frame-3 {
+            width: 20.95%;
+            top: 4.35%;
+            height: 95.65%;
+            background-image: url(./img/vector-3.svg);
+            background-size: 100% 100%;
+        }
+
+        /* Menu text styles */
+        .element-profile-SINHVIEN .list a span {
+            font-family: var(--body2-medium-font-family);
+            font-weight: var(--body2-medium-font-weight);
+            font-size: var(--body2-medium-font-size);
+            letter-spacing: var(--body2-medium-letter-spacing);
+            line-height: var(--body2-medium-line-height);
+            white-space: nowrap;
+            font-style: var(--body2-medium-font-style);
+            margin-left: 37px;
+        }
+        
+        .element-profile-SINHVIEN .list-menu .text-wrapper-4 {
+            color: #282938; /* Active link color */
+            top: 1px;
+        }
+        
+        .element-profile-SINHVIEN .list-menu-2 .text-wrapper-5 {
+            color: #9197b3; /* Inactive link color */
+            top: 2px;
+        }
+        
+        .element-profile-SINHVIEN .list-menu-3 .text-wrapper-6 {
+            color: #9197b3; /* Inactive link color */
+            top: 0;
+        }
+        
+        /* Notifications area */
+        .element-profile-SINHVIEN .text-wrapper-2 {
+            position: absolute;
+            top: 316px;
+            left: 73px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #9197b3;
+            font-size: 14px;
+            letter-spacing: -0.14px;
+            line-height: normal;
+        }
+        
+        .element-profile-SINHVIEN .notifications {
+            position: absolute;
+            top: 311px;
+            left: 32px;
+            width: 32px;
+            height: 30px;
+            background-color: #ffffff;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .element-profile-SINHVIEN .icon {
+            position: absolute;
+            width: 66.67%;
+            height: 83.33%;
+            top: 8.33%;
+            left: 16.67%;
+        }
+
+        /* Student Profile Info (Right side) */
+        .element-profile-SINHVIEN .overview {
+            position: absolute;
+            top: 139px;
+            left: 730px;
+            width: 630px;
+            height: 341px;
+        }
+        
+        .element-profile-SINHVIEN .img { /* Background graphic for info */
+            position: absolute;
+            top: -50px;
+            left: -60px;
+            width: 748px;
+            height: 461px;
+        }
+        
+        .element-profile-SINHVIEN .NAME-STUDENT-ID-DATE { /* dl list */
+            position: absolute;
+            top: 45px;
+            left: 80px;
+            width: 300px; /* Increased width to accommodate data */
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #282938;
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 27px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Layout dt and dd side-by-side */
+            gap: 5px 10px;
+        }
+        
+        .element-profile-SINHVIEN .NAME-STUDENT-ID-DATE dt {
+            font-weight: 500;
+            margin-top: 0;
+            grid-column: 1;
+        }
+        
+        .element-profile-SINHVIEN .NAME-STUDENT-ID-DATE dd {
+            font-weight: 400;
+            margin-left: 0;
+            margin-bottom: 0;
+            grid-column: 2;
+            color: #757575; /* Slightly lighter color for data */
+        }
+        
+        /* Student Photo (Left side) */
+        .element-profile-SINHVIEN .customers {
+            position: absolute;
+            top: 141px;
+            left: 380px;
+            width: 304px;
+            height: 339px;
+        }
+        
+        .element-profile-SINHVIEN .rectangle-3 { /* Background graphic for photo */
+            position: absolute;
+            top: -50px;
+            left: -60px;
+            width: 424px;
+            height: 459px;
+        }
+        
+        .element-profile-SINHVIEN .image {
+            position: absolute;
+            top: 49px;
+            left: 45px;
+            width: 210px;
+            height: 228px;
+            object-fit: cover;
+            aspect-ratio: 0.92;
+        }
+
+        /* Top Right User Info */
+        .element-profile-SINHVIEN .group-3 {
+            position: absolute;
+            top: 27px;
+            left: 1183px;
+            width: 187px;
+            height: 38px;
+            display: flex;
+            gap: 40px;
+            text-decoration: none;
+            align-items: center;
+        }
+        
+        .element-profile-SINHVIEN .group-4 {
+            width: 123px;
+            height: 38px;
+            position: relative;
+        }
+        
+        .element-profile-SINHVIEN .text-wrapper-7 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: var(--body2-regular-font-family);
+            font-weight: var(--body2-regular-font-weight);
+            color: #000000;
+            font-size: var(--body2-regular-font-size);
+            letter-spacing: var(--body2-regular-letter-spacing);
+            line-height: var(--body2-regular-line-height);
+            white-space: nowrap;
+            font-style: var(--body2-regular-font-style);
+        }
+        
+        .element-profile-SINHVIEN .text-wrapper-8 {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            font-family: var(--body3-medium-font-family);
+            font-weight: var(--body3-medium-font-weight);
+            color: #757575;
+            font-size: var(--body3-medium-font-size);
+            letter-spacing: var(--body3-medium-letter-spacing);
+            line-height: var(--body3-medium-line-height);
+            white-space: nowrap;
+            font-style: var(--body3-medium-font-style);
+        }
+        
+        .element-profile-SINHVIEN .chevron-down {
+            margin-top: 7px;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        
+        .element-profile-SINHVIEN .vector {
+            position: absolute;
+            width: 50.00%;
+            height: 25.00%;
+            top: 33.33%;
+            left: 20.83%;
+        }
+        
+        .element-profile-SINHVIEN .generic-avatar {
+            position: absolute;
+            top: 27px;
+            left: 1130px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main class="element-profile-SINHVIEN">
+        <header class="group">
+            <div class="rectangle" role="presentation"></div>
+            <div class="text-wrapper" aria-label="EDUFREE">[EDUFREE]</div>
+        </header>
+        
+        <aside class="side-menu" role="navigation" aria-label="Main navigation">
+            <div class="div" role="presentation"></div>
+            <div class="group-2">
+                <div class="rectangle-2" role="presentation"></div>
+                <div class="text-wrapper-3" aria-label="LOGO">[LOGO]</div>
+            </div>
+            
+            <nav class="list" aria-label="Navigation menu">
+                <a href="#personal-info" class="list-menu">
+                    <div class="frame"></div>
+                    <span class="text-wrapper-4">Personal Informations</span>
+                </a>
+                <a href="#my-courses" class="list-menu-2">
+                    <div class="frame-2"></div>
+                    <span class="text-wrapper-5">My Courses</span>
+                </a>
+                <a href="#calendar" class="list-menu-3">
+                    <div class="frame-3"></div>
+                    <span class="text-wrapper-6">Calendar</span>
+                </a>
+            </nav>
+            
+            <a href="#notifications" class="notifications" aria-label="Notifications">
+                <img class="icon" src="img/icon.svg" alt="Notifications icon" />
+            </a>
+            <span class="text-wrapper-2">Notifications</span>
+        </aside>
+        
+        <section class="customers" aria-label="Student photo">
+            <img class="rectangle-3" src="img/rectangle-29.svg" alt="" />
+            <img class="image" src="img/image-1.png" alt="Student profile photo" />
+        </section>
+        
+        <section class="overview" aria-labelledby="student-info-heading">
+            <img class="img" src="img/rectangle-16.svg" alt="" />
+            <h2 id="student-info-heading" class="visually-hidden">Student Information</h2>
+            
+            <dl class="NAME-STUDENT-ID-DATE">
+                <dt>NAME:</dt>
+                <dd>Son Tung MTP</dd>
+                
+                <dt>STUDENT ID:</dt>
+                <dd>20210001</dd>
+                
+                <dt>DATE OF BIRTH:</dt>
+                <dd>01/01/2003</dd>
+                
+                <dt>SEX:</dt>
+                <dd>Male</dd>
+                
+                <dt>ID CARD:</dt>
+                <dd>123456789</dd>
+            </dl>
+        </section>
+        
+        <a href="index.html" class="group-3" aria-label="User profile menu">
+            <div class="group-4">
+                <span class="text-wrapper-7">Hi, Son Tung MTP</span>
+                <span class="text-wrapper-8">Frontend Developer</span>
+            </div>
+            <div class="chevron-down">
+                <img class="vector" src="img/vector-2.svg" alt="Dropdown arrow" />
+            </div>
+        </a>
+        <img class="generic-avatar" src="img/style-avatar.svg" alt="User avatar" />
+    </main>
+</body>
+</html>
